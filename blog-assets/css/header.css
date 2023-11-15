@@ -2,12 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .header {
@@ -89,6 +87,9 @@ input::placeholder {
 
 .container-fluid {
   padding: 26px 5px;
+  position: absolute;
+  top: 50px;
+  z-index: 5;
 }
 .container-fluid .lists ul {
   display: flex;
@@ -133,12 +134,14 @@ input::placeholder {
 .container-fluid .input-basket .search {
   padding: 5px;
   margin-top: 6px;
+  background-color: transparent;
   border-bottom: 1px solid lightgray;
   transition: 0.4s;
 }
 .container-fluid .input-basket .search input {
   border: none;
   outline: none;
+  background-color: transparent;
 }
 .container-fluid .input-basket .search i {
   font-size: 18px;

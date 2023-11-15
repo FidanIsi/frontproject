@@ -2,12 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .header {
@@ -88,6 +86,9 @@ input::placeholder {
 
 .container-fluid {
   padding: 26px 5px;
+  position: absolute;
+  top: 50px;
+  z-index: 5;
 
   .lists {
     ul {
@@ -142,10 +143,12 @@ input::placeholder {
     .search {
       padding: 5px;
       margin-top: 6px;
+      background-color: transparent;
 
       input {
         border: none;
         outline: none;
+        background-color: transparent;
       }
 
       i {

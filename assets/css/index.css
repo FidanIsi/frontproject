@@ -1,4 +1,4 @@
-.leke {
+.blob {
   width: 1000px;
   position: absolute;
   top: -450px;
@@ -155,7 +155,7 @@
   padding: 20px 0;
   position: relative;
 }
-#DealOfWeak .leke {
+#DealOfWeak .blob {
   width: 900px;
   position: absolute;
   top: -200px;
@@ -253,7 +253,7 @@
   position: relative;
   overflow: hidden;
 }
-#Arrivals .leke {
+#Arrivals .blob {
   width: 1000px;
   position: absolute;
   top: 230px;
@@ -411,7 +411,7 @@
 #Summer {
   position: relative;
 }
-#Summer .leke {
+#Summer .blob {
   width: 600px;
   position: absolute;
   top: -150px;
