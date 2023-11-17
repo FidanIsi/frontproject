@@ -1,10 +1,16 @@
-.blob {
+.leke {
   width: 1000px;
   position: absolute;
   top: -450px;
   left: -450px;
 }
 
+#Slider {
+  margin-top: 120px;
+}
+#Slider .carousel ol {
+  z-index: 0;
+}
 #Slider .carousel ol li {
   background-color: gray;
   width: 5px;
@@ -65,10 +71,11 @@
   margin-bottom: 30px;
 }
 #Choices .caption h4 {
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: gray;
+  font-weight: 600;
 }
 #Choices .caption h2 {
   font-weight: bold;
@@ -155,7 +162,7 @@
   padding: 20px 0;
   position: relative;
 }
-#DealOfWeak .blob {
+#DealOfWeak .leke {
   width: 900px;
   position: absolute;
   top: -200px;
@@ -253,7 +260,7 @@
   position: relative;
   overflow: hidden;
 }
-#Arrivals .blob {
+#Arrivals .leke {
   width: 1000px;
   position: absolute;
   top: 230px;
@@ -411,7 +418,7 @@
 #Summer {
   position: relative;
 }
-#Summer .blob {
+#Summer .leke {
   width: 600px;
   position: absolute;
   top: -150px;

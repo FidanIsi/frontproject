@@ -1,3 +1,18 @@
+::-webkit-scrollbar {
+  margin-right: 10px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,11 +21,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-.header {
+header .header {
   width: 100%;
   height: 56px;
   font-size: 0.875rem;
@@ -23,38 +34,32 @@ body {
   position: relative;
   z-index: 2;
 }
-
-.right {
+header .right {
   padding-right: 25px;
 }
-
-.social-media {
+header .social-media {
   margin-left: 15px;
 }
-.social-media i {
+header .social-media i {
   font-size: 14px;
   margin-right: 5px;
 }
-.social-media span {
+header .social-media span {
   font-size: 15px;
   font-family: monospace;
 }
-
-.fa-brands:hover {
+header .fa-brands:hover {
   cursor: pointer;
   color: #bcac76;
 }
-
-.fa-phone {
+header .fa-phone {
   margin-left: 15px;
 }
-
-.fa-solid {
+header .fa-solid {
   font-size: 12px;
   font-weight: bolder;
 }
-
-.dropbtn {
+header .dropbtn {
   border: none;
   background-color: transparent;
   padding: 5px;
@@ -62,8 +67,7 @@ body {
   cursor: pointer;
   color: #343a40;
 }
-
-.dropdown-content {
+header .dropdown-content {
   display: none;
   position: absolute;
   background-color: white;
@@ -72,43 +76,40 @@ body {
   overflow: auto;
   z-index: 1;
 }
-.dropdown-content a {
+header .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
-input::-moz-placeholder {
+header input::-moz-placeholder {
   color: #b6bdc4;
 }
-
-input::placeholder {
+header input::placeholder {
   color: #b6bdc4;
 }
-
-.container-fluid {
-  padding: 26px 5px;
+header .lists {
+  margin-top: 30px;
 }
-.container-fluid .lists ul {
+header .lists ul {
   display: flex;
   list-style: none;
 }
-.container-fluid .lists ul li {
+header .lists ul li {
+  z-index: 10000;
+  cursor: pointer;
   padding: 0 12px;
-}
-.container-fluid .lists ul li .active {
-  color: black;
-}
-.container-fluid .lists ul li a {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
   text-decoration: none;
 }
-.container-fluid .lists ul li a:hover {
+header .lists ul li .active {
   color: black;
 }
-.container-fluid .lists .home-list {
+header .lists ul li:hover {
+  color: black;
+}
+header .lists .home-list {
   display: none;
   position: relative;
   left: 100px;
@@ -117,7 +118,7 @@ input::placeholder {
   background-color: white;
   padding: 12px 0 12px 48px;
 }
-.container-fluid .lists .home-list li {
+header .lists .home-list li {
   display: flex;
   padding: 7px 0;
   position: relative;
@@ -125,45 +126,46 @@ input::placeholder {
   font-weight: 600;
   color: #868e96;
 }
-.container-fluid .input-basket {
+header .input-basket {
   display: flex;
   justify-content: space-between;
-  margin: 0 50px;
+  margin: 30px 50px 0 50px;
 }
-.container-fluid .input-basket .search {
+header .input-basket .search {
   padding: 5px;
   margin-top: 6px;
   border-bottom: 1px solid lightgray;
   transition: 0.4s;
 }
-.container-fluid .input-basket .search input {
+header .input-basket .search input {
   border: none;
   outline: none;
+  background-color: transparent;
 }
-.container-fluid .input-basket .search i {
+header .input-basket .search i {
   font-size: 18px;
 }
-.container-fluid .input-basket .search:hover {
+header .input-basket .search:hover {
   border-bottom: 1px solid black;
 }
-.container-fluid .input-basket .person-basket .person {
+header .input-basket .person-basket .person {
   font-size: 26px;
 }
-.container-fluid .input-basket .person-basket .basket {
+header .input-basket .person-basket .basket {
   font-size: 22px;
 }
-.container-fluid .input-basket .person-basket .menu {
+header .input-basket .person-basket .menu {
   font-size: 26px;
 }
-.container-fluid .input-basket .person-basket i {
+header .input-basket .person-basket i {
   padding: 0 6px;
   font-size: 22px;
   transition: 0.3s;
 }
-.container-fluid .input-basket .person-basket i:hover {
+header .input-basket .person-basket i:hover {
   color: #bcac76;
 }
-.container-fluid .input-basket .person-basket span {
+header .input-basket .person-basket span {
   position: absolute;
   display: inline-block;
   width: 20px;
@@ -174,9 +176,409 @@ input::placeholder {
   font-size: 11px;
   background-color: #bcac76;
 }
-.container-fluid .input-basket .person-basket .wishlist {
+header .input-basket .person-basket .wishlist {
   right: 142px;
 }
-.container-fluid .input-basket .person-basket .baskett {
+header .input-basket .person-basket .baskett {
   right: 103px;
+}
+
+#dropDown {
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#dropDown .title {
+  color: black;
+  font-weight: 600;
+}
+#dropDown p {
+  font-weight: 500;
+  color: gray;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+}
+#dropDown p:hover {
+  color: black;
+}
+#dropDown p span {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 10px;
+  background-color: #f7f5ef;
+  color: #bcac76;
+  font-weight: 700;
+}
+#dropDown p a {
+  text-decoration: none;
+  color: gray;
+}
+#dropDown p a:hover {
+  color: black;
+}
+#dropDown #homeDrop {
+  display: none;
+}
+#dropDown .homeDrop {
+  animation-duration: 0.5s;
+  box-shadow: 1px 2px 10px 2px lightgray;
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  background-color: white;
+  padding: 20px 20px;
+  transition: all 0.4s;
+}
+#dropDown #shopDown {
+  display: none;
+}
+#dropDown .shopDown {
+  animation-duration: 0.5s;
+  position: absolute;
+  top: 80px;
+  left: 220px;
+  background-color: white;
+}
+#dropDown .shopDown .parent {
+  display: flex;
+}
+#dropDown .shopDown .parent .pages {
+  padding: 55px 30px 0 30px;
+}
+#dropDown .shopDown .parent .proPages {
+  padding: 55px 30px 0 30px;
+}
+#dropDown .shopDown .parent .image {
+  height: 300px;
+  overflow: hidden;
+  text-align: center;
+}
+#dropDown .shopDown .parent .image img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#dropDown #iconsDown {
+  display: none;
+}
+#dropDown .iconsDown {
+  animation-duration: 0.5s;
+  box-shadow: 1px 2px 10px 2px lightgray;
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  padding: 20px 20px 0 20px;
+  transition: all 0.4s;
+  background-color: white;
+}
+#dropDown .iconsDown .icon-name {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#dropDown .iconsDown .icon-name p {
+  color: #343a40;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0 5px;
+}
+#dropDown .iconsDown .icon-name p i {
+  font-size: 40px;
+}
+#dropDown .iconsDown .icon-name .dress {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#dropDown .iconsDown .icon-name:hover .dress {
+  border-bottom: 2px solid black;
+}
+#dropDown .iconsDown .bottomText {
+  padding: 20px 0 5px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #bcac76;
+}
+#dropDown .iconsDown .bottomText p {
+  color: black;
+  font-weight: 500;
+}
+#dropDown #pagesDown {
+  display: none;
+}
+#dropDown .pagesDown {
+  z-index: 300000000;
+  animation-duration: 0.5s;
+  box-shadow: 1px 2px 10px 2px lightgray;
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  padding: 20px 20px 0 20px;
+  transition: all 0.4s;
+  background-color: white;
+  width: 85%;
+}
+#dropDown .pagesDown .image img {
+  width: 100%;
+}
+#dropDown .pagesDown .info-1 {
+  margin-top: 16px;
+}
+#dropDown .pagesDown .info-1 h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+#dropDown #docsDrop {
+  display: none;
+}
+#dropDown .docsDrop {
+  animation-duration: 0.5s;
+  width: 15%;
+  box-shadow: 1px 2px 10px 2px lightgray;
+  position: absolute;
+  top: 80px;
+  left: 460px;
+  background-color: white;
+  padding: 20px 0 10px 0;
+  transition: all 0.4s;
+}
+#dropDown .docsDrop p {
+  padding: 5px 20px;
+  font-weight: 500;
+}
+
+#staticBackdrop {
+  width: 100%;
+}
+#staticBackdrop #SideBasket {
+  display: flex;
+  justify-content: end;
+}
+#staticBackdrop #SideBasket .modal-dialog {
+  width: 100%;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent {
+  border-radius: 0;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-header {
+  border-bottom: none;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-header button {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: 0.2s;
+  font-weight: 200;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-header button:hover {
+  transform: rotate(90deg);
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body {
+  height: 700px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar {
+  margin-right: 10px;
+  width: 5px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products {
+  display: flex;
+  padding: 26px 0;
+  margin: 0 20px;
+  border-bottom: 1px solid lightgray;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .image {
+  margin-left: 25px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .image img {
+  width: 100px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price {
+  margin: 5px 15px;
+  padding: 0;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price .name {
+  font-weight: bolder;
+  font-size: 17px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price .quantity {
+  color: gray;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price p {
+  font-size: 14px;
+  margin: 5px;
+  padding: 0;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .xBtn {
+  font-size: 11px;
+  position: relative;
+  top: 8px;
+  left: 150px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer {
+  justify-content: center;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .subTotal {
+  margin: 0 33px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .subTotal p {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer button {
+  margin: 6px 0 10px 0;
+  width: 86.5%;
+  padding: 7px 0px;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  transition: 0.5s;
+  font-weight: 550;
+  letter-spacing: 2px;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .view {
+  background-color: white;
+  color: black;
+}
+#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .view:hover {
+  color: white;
+  background-color: black;
+}
+
+#staticBack {
+  width: 100%;
+}
+#staticBack #SideBasket {
+  display: flex;
+  justify-content: end;
+}
+#staticBack #SideBasket .modal-dialog {
+  width: 100%;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body {
+  padding: 16px 48px;
+  position: relative;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body h5 {
+  color: #212529;
+  font-weight: bolder;
+  margin-bottom: 48px;
+  overflow: hidden;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul {
+  color: #868e96;
+  position: relative;
+  transition: 0.3s;
+  list-style: none;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul li {
+  padding: 8px 16px 8px 0;
+  align-items: center;
+  cursor: pointer;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul li i {
+  font-size: 12px;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul .active {
+  transition: 0.3s;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul .active:hover {
+  color: #bcac76;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-list {
+  margin-left: 1rem;
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-list .dropdown-items:hover {
+  color: #bcac76;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .contact {
+  margin-bottom: 24px;
+  color: #212529;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .contact i {
+  margin-right: 0.5rem;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body .contact span {
+  font-size: 17.5px;
+  font-family: monospace;
+}
+#staticBack #SideBasket .modal-dialog .sidebar-body p {
+  color: #868e96;
+  font-size: 14px;
+  font-weight: 500;
+}
+#staticBack #SideBasket .modal-dialog .parent {
+  border-radius: 0;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-header {
+  border-bottom: none;
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-header button {
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: 0.2s;
+  font-weight: 200;
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-header button:hover {
+  transform: rotate(90deg);
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-body {
+  height: 700px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar {
+  margin-right: 10px;
+  width: 5px;
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+#staticBack #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
 }/*# sourceMappingURL=header.css.map */
