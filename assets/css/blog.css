@@ -128,4 +128,27 @@
   font-weight: bolder;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
+}
+
+@media (max-width: 1000px) {
+  #News .col-lg-4 {
+    width: 50%;
+  }
+}
+@media (max-width: 760px) {
+  #News .col-lg-4 .image img {
+    width: 250px;
+    height: 170px;
+  }
+}
+@media (max-width: 570px) {
+  #News .col-lg-4 {
+    width: 100%;
+  }
+  #News .col-lg-4 .image img {
+    width: 100%;
+    /* Make the image take up the full width of the container */
+    height: auto;
+    /* Allow the height to scale proportionally */
+  }
 }/*# sourceMappingURL=blog.css.map */

@@ -159,6 +159,8 @@
 }
 
 #Team {
+  padding-bottom: 3rem;
+
   .line {
     width: 50%;
     margin-top: 0.5rem;
@@ -220,8 +222,65 @@
 }
 
 #Brands {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  background: #f8f9fa;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .container {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    .swiper-container {
+      width: calc(210px * 5 + 15px * 4);
+      max-width: 100%;
+      margin: 0 auto;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        width: 210px;
+        margin-right: 15px;
+
+        img {
+          width: 100px;
+          height: auto;
+          object-fit: contain;
+          opacity: .7;
+        }
+      }
+
+      .swiper-pagination {
+        bottom: 10px;
+        text-align: center;
+        z-index: 10;
+
+        .swiper-pagination-bullet {
+          width: 5px;
+          height: 5px;
+          display: inline-block;
+          margin: 0 5px;
+          background-color: #888;
+          border-radius: 50%;
+          opacity: 0.8;
+          transition: transform 0.3s ease-out;
+          cursor: pointer;
+        }
+
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background-color: #bcac76;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
 }
 
 #Choice {

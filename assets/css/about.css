@@ -136,6 +136,9 @@
   color: #868e96;
 }
 
+#Team {
+  padding-bottom: 3rem;
+}
 #Team .line {
   width: 50%;
   margin-top: 0.5rem;
@@ -189,8 +192,58 @@
 }
 
 #Brands {
+  background: #f8f9fa;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#Brands .container {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+#Brands .container .swiper-container {
+  width: 1110px;
+  max-width: 100%;
+  margin: 0 auto;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Brands .container .swiper-container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  width: 210px;
+  margin-right: 15px;
+}
+#Brands .container .swiper-container .swiper-slide img {
+  width: 100px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.7;
+}
+#Brands .container .swiper-container .swiper-pagination {
+  bottom: 10px;
+  text-align: center;
+  z-index: 10;
+}
+#Brands .container .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  margin: 0 5px;
+  background-color: #888;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+#Brands .container .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #bcac76;
+  transform: scale(1.5);
 }
 
 #Choice {

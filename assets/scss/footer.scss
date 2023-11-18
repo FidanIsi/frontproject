@@ -147,3 +147,34 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .footer2 {
+    text-align: center;
+
+    .col-lg-8 {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 0;
+    }
+  }
+
+
+}
+
+/* Mobile styling - 1 column per row */
+@media (max-width: 529px) {
+  .footer2 {
+
+    .col-lg-8 {
+      font-size: 11px !important;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+  }
+}
