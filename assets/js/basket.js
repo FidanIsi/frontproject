@@ -106,7 +106,7 @@ function ShowTotalPrice(myitem) {
 }
 
 function ShowProductCount(myitem) {
-  let myitemCount = document.querySelectorAll(".baskett");
+  let myitemCount = document.querySelectorAll(".basket-size");
   myitemCount.forEach((dvc) => {
     dvc.innerText = myitem.reduce((total, product) => {
       return Math.trunc((total += product.count));

@@ -1,5 +1,4 @@
-#Hero {
-
+#Parallax {
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -9,25 +8,89 @@
   background-color: #f2f3f7;
   z-index: 0;
 
+  @media screen and (max-width:700px) {
+    .circle-parallax {
+      position: relative;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
 
-  .circle {
-    position: absolute;
-    top: 170px;
-    left: 490px;
-    z-index: 1;
+      .circle {
+        position: absolute;
+        z-index: 1;
+        width: 600px;
+        height: 600px;
 
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background-color: #bbd5e4;
+        border-radius: 50%;
+        background-color: #bbd5e4;
+      }
+
+      .parallax {
+        position: absolute;
+        top: -40px !important;
+        z-index: 1;
+        left: 10px !important;
+
+        width: 100% !important;
+        transform: scale(1.2) !important;
+      }
+    }
   }
 
-  .paralax {
-    position: absolute;
-    top: 50px;
-    left: 560px;
-    z-index: 1;
-    width: 29%;
+  @media screen and (min-width:701px) and (max-width:1200px) {
+    .circle-parallax {
+      position: relative;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .circle {
+        position: absolute;
+        z-index: 1;
+        width: 600px;
+        height: 600px;
+
+        border-radius: 50%;
+        background-color: #bbd5e4;
+      }
+
+      .parallax {
+        position: absolute;
+        top: -40px !important;
+        z-index: 1;
+        left: 250px !important;
+
+        width: 40% !important;
+        transform: scale(1.2) !important;
+      }
+    }
+  }
+
+  .circle-parallax {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .circle {
+      position: absolute;
+      z-index: 1;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background-color: #bbd5e4;
+    }
+
+    .parallax {
+      position: absolute;
+      top: -190px;
+      z-index: 1;
+      left: 600px;
+      width: 25%;
+    }
   }
 
   p {
@@ -37,15 +100,12 @@
     font-size: .875rem;
     color: #868e96;
     position: relative;
-    z-index: 100;
+    z-index: 1;
 
     .gold {
       font-weight: bold;
       color: #bcac76;
-
-      &:hover {
-        cursor: pointer;
-      }
+      transition: .3s;
     }
 
     .stick {
@@ -77,7 +137,7 @@
   }
 }
 
-#News {
+#FashionNews {
   margin-top: 100px;
 
   img {
@@ -125,7 +185,7 @@
   }
 }
 
-#Pagination {
+#Pages {
   .pages {
     display: flex;
     justify-content: space-between;
@@ -155,13 +215,13 @@
 }
 
 @media (max-width: 1000px) {
-  #News .col-lg-4 {
+  #FashionNews .col-lg-4 {
     width: 50%;
   }
 }
 
 @media (max-width: 760px) {
-  #News {
+  #FashionNews {
     .col-lg-4 {
       .image {
         img {
@@ -170,21 +230,18 @@
         }
       }
     }
-
   }
 }
 
 @media (max-width: 570px) {
-  #News {
+  #FashionNews {
     .col-lg-4 {
       width: 100%;
 
       .image {
         img {
           width: 100%;
-          /* Make the image take up the full width of the container */
           height: auto;
-          /* Allow the height to scale proportionally */
         }
       }
     }

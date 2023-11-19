@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     centeredSlides: true,
     loop: true,
-    spaceBetween: 0,
+    spaceBetween: 5,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

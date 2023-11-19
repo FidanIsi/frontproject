@@ -25,7 +25,7 @@
       remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
 
     if (distance < 0) {
-      document.getElementById("headline").innerText = "It's my birthday!";
+      document.getElementById("headline").innerText = "Hello!";
       document.getElementById("countdown").style.display = "none";
       document.getElementById("content").style.display = "block";
       clearInterval(x);
@@ -39,4 +39,15 @@ var swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
     clickable: true,
   },
+});
+
+$(".title").click(function () {
+  let $icon = $(this).find("i");
+  $icon.toggleClass("active");
+  $(this).next().slideToggle();
+
+  if ($icon.hasClass("active")) {
+    $(".info").not($info).slideUp();
+    $(".title i").not($icon).removeClass("active");
+  }
 });

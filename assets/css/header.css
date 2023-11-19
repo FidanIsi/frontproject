@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 ::-webkit-scrollbar {
   margin-right: 10px;
   width: 5px;
@@ -13,14 +21,6 @@
   border-radius: 10px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 header .header {
   width: 100%;
   height: 56px;
@@ -34,32 +34,28 @@ header .header {
   position: relative;
   z-index: 2;
 }
-header .right {
-  padding-right: 25px;
-}
-header .social-media {
+header .header .social-media {
   margin-left: 15px;
 }
-header .social-media i {
+header .header .social-media i {
   font-size: 14px;
   margin-right: 5px;
 }
-header .social-media span {
-  font-size: 15px;
-  font-family: monospace;
-}
-header .fa-brands:hover {
+header .header .social-media .fa-brands:hover {
   cursor: pointer;
   color: #bcac76;
 }
-header .fa-phone {
+header .header .social-media .fa-phone {
   margin-left: 15px;
 }
-header .fa-solid {
-  font-size: 12px;
-  font-weight: bolder;
+header .header .social-media span {
+  font-size: 15px;
+  font-family: monospace;
 }
-header .dropbtn {
+header .header .right {
+  padding-right: 25px;
+}
+header .header .right .dropdown .dropButton {
   border: none;
   background-color: transparent;
   padding: 5px;
@@ -67,20 +63,47 @@ header .dropbtn {
   cursor: pointer;
   color: #343a40;
 }
-header .dropdown-content {
+header .header .right .dropdown .fa-solid {
+  font-size: 12px;
+  font-weight: bolder;
+}
+header .header .right .dropdown .dropdown-content {
   display: none;
   position: absolute;
+  right: 90px;
   background-color: white;
   color: black;
   min-width: 150px;
+  border-radius: 12px;
   overflow: auto;
-  z-index: 1;
+  border: 1px solid lightgray;
 }
-header .dropdown-content a {
-  color: black;
+header .header .right .dropdown .dropdown-content a {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  color: gray;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  transition: 0.4s;
+  font-size: 12px;
+}
+header .header .right .dropdown .dropdown-content a:hover {
+  color: black;
+}
+header .header .right .dropdown .dropdown-content:nth-child(2) {
+  right: 20px;
+}
+@media screen and (max-width: 1240px) {
+  header .header .left {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  header .header .right {
+    display: none !important;
+  }
 }
 header input::-moz-placeholder {
   color: #b6bdc4;
@@ -88,31 +111,38 @@ header input::-moz-placeholder {
 header input::placeholder {
   color: #b6bdc4;
 }
-header .lists {
+header .header2 {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  z-index: 5;
+}
+header .header2 .headerList {
   margin-top: 30px;
 }
-header .lists ul {
+header .header2 .headerList ul {
   display: flex;
   list-style: none;
 }
-header .lists ul li {
-  z-index: 10000;
-  cursor: pointer;
-  padding: 0 12px;
+header .header2 .headerList ul li {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
   text-decoration: none;
+  z-index: 10000;
+  cursor: pointer;
+  padding: 0 12px;
 }
-header .lists ul li i {
+header .header2 .headerList ul li .active {
+  color: black;
+}
+header .header2 .headerList ul li:hover {
+  color: black;
+}
+header .header2 .headerList ul li i {
   transition: 0.4s;
+  transform: rotateZ(0deg);
 }
-header .lists ul li .active {
-  color: black;
-}
-header .lists ul li:hover {
-  color: black;
-}
-header .lists .home-list {
+header .header2 .headerList .home-list {
   display: none;
   position: relative;
   left: 100px;
@@ -121,7 +151,7 @@ header .lists .home-list {
   background-color: white;
   padding: 12px 0 12px 48px;
 }
-header .lists .home-list li {
+header .header2 .headerList .home-list li {
   display: flex;
   padding: 7px 0;
   position: relative;
@@ -129,46 +159,52 @@ header .lists .home-list li {
   font-weight: 600;
   color: #868e96;
 }
-header .input-basket {
+header .header2 .icons {
+  display: none;
+}
+header .header2 .input-basket {
   display: flex;
   justify-content: space-between;
   margin: 30px 50px 0 50px;
 }
-header .input-basket .search {
+header .header2 .input-basket .search {
   padding: 5px;
   margin-top: 6px;
   border-bottom: 1px solid lightgray;
   transition: 0.4s;
 }
-header .input-basket .search input {
+header .header2 .input-basket .search input {
   border: none;
   outline: none;
   background-color: transparent;
 }
-header .input-basket .search i {
+header .header2 .input-basket .search i {
   font-size: 18px;
 }
-header .input-basket .search:hover {
+header .header2 .input-basket .search:hover {
   border-bottom: 1px solid black;
 }
-header .input-basket .person-basket .person {
+header .header2 .input-basket .person-basket .person {
   font-size: 26px;
 }
-header .input-basket .person-basket .basket {
+header .header2 .input-basket .person-basket .phoneList {
+  display: none;
+}
+header .header2 .input-basket .person-basket .basket {
   font-size: 22px;
 }
-header .input-basket .person-basket .menu {
+header .header2 .input-basket .person-basket .menu {
   font-size: 26px;
 }
-header .input-basket .person-basket i {
+header .header2 .input-basket .person-basket i {
   padding: 0 6px;
   font-size: 22px;
   transition: 0.3s;
 }
-header .input-basket .person-basket i:hover {
+header .header2 .input-basket .person-basket i:hover {
   color: #bcac76;
 }
-header .input-basket .person-basket span {
+header .header2 .input-basket .person-basket span {
   position: absolute;
   display: inline-block;
   width: 20px;
@@ -179,34 +215,276 @@ header .input-basket .person-basket span {
   font-size: 11px;
   background-color: #bcac76;
 }
-header .input-basket .person-basket .wishlist {
+header .header2 .input-basket .person-basket .wishlist {
   right: 142px;
 }
-header .input-basket .person-basket .baskett {
+header .header2 .input-basket .person-basket .basket-size {
   right: 103px;
 }
+@media screen and (max-width: 990px) {
+  header .header2 .row {
+    justify-content: center;
+    width: 100%;
+  }
+  header .header2 .row .headerList ul .myList {
+    display: none;
+  }
+  header .header2 .row .icons {
+    display: block;
+    display: flex;
+    padding: 0 !important;
+    justify-content: center;
+    width: 100%;
+  }
+  header .header2 .row .icons .input-basket .myList {
+    position: relative;
+    text-align: center;
+  }
+  header .header2 .row .icons .input-basket .myList span {
+    right: -4px;
+  }
+  header .header2 .row .icons .input-basket .myList .wishlist {
+    right: 29px;
+  }
+  header .header2 .row .side .input-basket {
+    justify-content: end;
+  }
+  header .header2 .row .side .input-basket .search {
+    display: none;
+  }
+  header .header2 .row .side .input-basket .phoneList {
+    display: block;
+  }
+  header .header2 .row .side .input-basket .myList .person,
+  header .header2 .row .side .input-basket .myList .bi-heart,
+  header .header2 .row .side .input-basket .myList .bi-basket,
+  header .header2 .row .side .input-basket .myList .bi-person,
+  header .header2 .row .side .input-basket .myList .baseList,
+  header .header2 .row .side .input-basket .myList span {
+    display: none;
+  }
+}
+@media screen and (max-width: 1233px) {
+  header .header2 .lists {
+    margin-top: 30px;
+  }
+  header .header2 .lists ul li {
+    z-index: 10000;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  header .header2 .lists ul li .active {
+    color: black;
+  }
+  header .header2 .lists ul li:hover {
+    color: black;
+  }
+  header .header2 .lists ul li i {
+    transition: 0.4s;
+    transform: rotateZ(0deg);
+  }
+  header .header2 .input-basket {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 10px 0 10px;
+  }
+  header .header2 .input-basket .search {
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    transition: 0.4s;
+  }
+  header .header2 .input-basket .search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  header .header2 .input-basket .search i {
+    font-size: 14px;
+  }
+  header .header2 .input-basket .search:hover {
+    border-bottom: 1px solid black;
+  }
+  header .header2 .input-basket .person-basket {
+    position: relative;
+  }
+  header .header2 .input-basket .person-basket .person {
+    font-size: 17px;
+  }
+  header .header2 .input-basket .person-basket .basket {
+    font-size: 22px;
+  }
+  header .header2 .input-basket .person-basket .menu {
+    font-size: 26px;
+  }
+  header .header2 .input-basket .person-basket i {
+    padding: 0 6px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  header .header2 .input-basket .person-basket i:hover {
+    color: #bcac76;
+  }
+  header .header2 .input-basket .person-basket span {
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 11px;
+    background-color: #bcac76;
+  }
+  header .header2 .input-basket .person-basket .wishlist {
+    right: 60px;
+  }
+  header .header2 .input-basket .person-basket .basket-size {
+    right: 30px;
+  }
+}
 
-#dropDown {
+#responsiveness {
+  display: none;
+}
+@media screen and (max-width: 990px) {
+  #responsiveness {
+    display: none;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+  }
+  #responsiveness .lists {
+    margin-top: 50px;
+    z-index: 102;
+  }
+  #responsiveness .lists ul {
+    list-style: none;
+    padding-left: 60px;
+  }
+  #responsiveness .lists ul li {
+    color: black;
+    z-index: 10000;
+    cursor: pointer;
+    padding: 6px 0;
+    font-size: 13px;
+    color: black !important;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  #responsiveness .lists ul li .active {
+    color: black;
+  }
+  #responsiveness .lists ul li:hover {
+    color: black;
+  }
+  #responsiveness .lists ul li i {
+    font-size: 10px;
+    transition: 0.4s;
+    transform: rotateZ(0deg);
+  }
+  #responsiveness .lists ul li .title {
+    color: black;
+    font-weight: 600;
+  }
+  #responsiveness .lists ul li p {
+    font-weight: 500;
+    color: gray;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+  }
+  #responsiveness .lists ul li p:hover {
+    color: black;
+  }
+  #responsiveness .lists ul li p span {
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 10px;
+    background-color: #f7f5ef;
+    color: #bcac76;
+    font-weight: 700;
+  }
+  #responsiveness .lists ul li p a {
+    text-decoration: none;
+    color: gray;
+  }
+  #responsiveness .lists ul li p a:hover {
+    color: black;
+  }
+  #responsiveness .lists ul li #homeDropdown {
+    display: none;
+  }
+  #responsiveness .lists ul li .homeDropdown {
+    background-color: white;
+    padding: 0 0;
+    margin-right: 50px;
+  }
+  #responsiveness .lists ul li #shoppingDropdown {
+    display: none;
+  }
+  #responsiveness .lists ul li .shopDown {
+    background-color: white;
+  }
+  #responsiveness .lists ul li .shopping {
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #responsiveness .search {
+    padding: 5px 12px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    transition: 0.4s;
+  }
+  #responsiveness .search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  #responsiveness .search i {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  #responsiveness .search:hover {
+    border-bottom: 1px solid black;
+  }
+}
+
+#dropDownList {
   position: absolute;
+  display: inline-block;
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
-#dropDown .title {
+@media screen and (max-width: 990px) {
+  #dropDownList {
+    display: none;
+  }
+}
+#dropDownList .title {
   color: black;
   font-weight: 600;
 }
-#dropDown p {
+#dropDownList p {
   font-weight: 500;
-  color: gray;
+  color: #868e96;
   font-size: 14px;
   line-height: 14px;
   cursor: pointer;
 }
-#dropDown p:hover {
+#dropDownList p:hover {
   color: black;
 }
-#dropDown p span {
+#dropDownList p span {
   display: inline-block;
   margin-left: 12px;
   font-size: 11px;
@@ -216,131 +494,132 @@ header .input-basket .person-basket .baskett {
   color: #bcac76;
   font-weight: 700;
 }
-#dropDown p a {
+#dropDownList p a {
   text-decoration: none;
   color: gray;
 }
-#dropDown p a:hover {
+#dropDownList p a:hover {
   color: black;
 }
-#dropDown #homeDrop {
+#dropDownList #homeDropDown {
   display: none;
 }
-#dropDown .homeDrop {
+#dropDownList .homeDropDown {
   animation-duration: 0.5s;
   box-shadow: 1px 2px 10px 2px lightgray;
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 140px;
   background-color: white;
   padding: 20px 20px;
   transition: all 0.4s;
 }
-#dropDown #shopDown {
+#dropDownList #shopDropDown {
   display: none;
 }
-#dropDown .shopDown {
+#dropDownList .shopDropDown {
   animation-duration: 0.5s;
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 220px;
   background-color: white;
 }
-#dropDown .shopDown .parent {
+#dropDownList .shopDropDown .content {
   display: flex;
 }
-#dropDown .shopDown .parent .pages {
+#dropDownList .shopDropDown .content .left {
   padding: 55px 30px 0 30px;
 }
-#dropDown .shopDown .parent .proPages {
+#dropDownList .shopDropDown .content .right {
   padding: 55px 30px 0 30px;
 }
-#dropDown .shopDown .parent .image {
+#dropDownList .shopDropDown .content .image {
   height: 300px;
   overflow: hidden;
   text-align: center;
 }
-#dropDown .shopDown .parent .image img {
+#dropDownList .shopDropDown .content .image img {
   width: 100%;
   margin: 0;
   padding: 0;
   height: 100%;
 }
-#dropDown #iconsDown {
+#dropDownList #iconsDropDown {
   display: none;
 }
-#dropDown .iconsDown {
+#dropDownList .iconsDropDown {
   animation-duration: 0.5s;
   box-shadow: 1px 2px 10px 2px lightgray;
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 300px;
   padding: 20px 20px 0 20px;
   transition: all 0.4s;
   background-color: white;
 }
-#dropDown .iconsDown .icon-name {
+#dropDownList .iconsDropDown .icon-name {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-#dropDown .iconsDown .icon-name p {
+#dropDownList .iconsDropDown .icon-name p {
   color: #343a40;
   font-weight: 700;
   font-size: 15px;
   padding: 0 5px;
 }
-#dropDown .iconsDown .icon-name p img {
+#dropDownList .iconsDropDown .icon-name p img {
   width: 48px;
   height: 48px;
 }
-#dropDown .iconsDown .icon-name .dress {
+#dropDownList .iconsDropDown .icon-name .product-names {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
-#dropDown .iconsDown .icon-name:hover .dress {
+#dropDownList .iconsDropDown .icon-name:hover .product-names {
   border-bottom: 2px solid black;
 }
-#dropDown .iconsDown .bottomText {
+#dropDownList .iconsDropDown .discount {
   padding: 20px 0 5px 0;
   display: flex;
   justify-content: center;
   background-color: #bcac76;
 }
-#dropDown .iconsDown .bottomText p {
+#dropDownList .iconsDropDown .discount p {
   color: black;
   font-weight: 500;
 }
-#dropDown #pagesDown {
+#dropDownList #pagesDropDown {
   display: none;
 }
-#dropDown .pagesDown {
-  z-index: 300000000;
+#dropDownList .pagesDropDown {
+  z-index: 0;
   animation-duration: 0.5s;
   box-shadow: 1px 2px 10px 2px lightgray;
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 140px;
   padding: 20px 20px 0 20px;
   transition: all 0.4s;
   background-color: white;
   width: 85%;
 }
-#dropDown .pagesDown .image img {
+#dropDownList .pagesDropDown .image img {
   width: 100%;
 }
-#dropDown .pagesDown .info-1 {
+#dropDownList .pagesDropDown .info {
   margin-top: 16px;
 }
-#dropDown .pagesDown .info-1 h4 {
+#dropDownList .pagesDropDown .info h4 {
   font-size: 16px;
   font-weight: 600;
+  padding-bottom: 20px;
 }
-#dropDown #docsDrop {
+#dropDownList #docsDropDown {
   display: none;
 }
-#dropDown .docsDrop {
+#dropDownList .docsDropDown {
   animation-duration: 0.5s;
   width: 15%;
   box-shadow: 1px 2px 10px 2px lightgray;
@@ -351,22 +630,22 @@ header .input-basket .person-basket .baskett {
   padding: 20px 0 10px 0;
   transition: all 0.4s;
 }
-#dropDown .docsDrop p {
+#dropDownList .docsDropDown p {
   padding: 5px 20px;
   font-weight: 500;
 }
 
-#staticBackdrop {
+#basketDrop {
   width: 100%;
 }
-#staticBackdrop #SideBasket {
+#basketDrop #Basket {
   display: flex;
   justify-content: end;
 }
-#staticBackdrop #SideBasket .modal-dialog {
+#basketDrop #Basket .modal-dialog {
   width: 100%;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent {
+#basketDrop #Basket .modal-dialog .parent {
   border-radius: 0;
   display: flex;
   justify-content: right;
@@ -374,85 +653,85 @@ header .input-basket .person-basket .baskett {
   padding: 0;
   height: 100vh;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-header {
+#basketDrop #Basket .modal-dialog .parent .modal-header {
   border-bottom: none;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-header button {
+#basketDrop #Basket .modal-dialog .parent .modal-header button {
   margin-top: 5px;
   margin-right: 10px;
   font-size: 20px;
   transition: 0.2s;
   font-weight: 200;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-header button:hover {
+#basketDrop #Basket .modal-dialog .parent .modal-header button:hover {
   transform: rotate(90deg);
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body {
+#basketDrop #Basket .modal-dialog .parent .modal-body {
   height: 700px;
   overflow: scroll;
   overflow-x: hidden;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar {
+#basketDrop #Basket .modal-dialog .parent .modal-body::-webkit-scrollbar {
   margin-right: 10px;
   width: 5px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-track {
+#basketDrop #Basket .modal-dialog .parent .modal-body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-thumb {
+#basketDrop #Basket .modal-dialog .parent .modal-body::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products {
   display: flex;
   padding: 26px 0;
   margin: 0 20px;
   border-bottom: 1px solid lightgray;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .image {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .image {
   margin-left: 25px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .image img {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .image img {
   width: 100px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .name-price {
   margin: 5px 15px;
   padding: 0;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price .name {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .name-price .name {
   font-weight: bolder;
   font-size: 17px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price .quantity {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .name-price .quantity {
   color: gray;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .name-price p {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .name-price p {
   font-size: 14px;
   margin: 5px;
   padding: 0;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-body .products .xBtn {
+#basketDrop #Basket .modal-dialog .parent .modal-body .products .xBtn {
   font-size: 11px;
   position: relative;
   top: 8px;
   left: 150px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer {
+#basketDrop #Basket .modal-dialog .parent .modal-footer {
   justify-content: center;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .subTotal {
+#basketDrop #Basket .modal-dialog .parent .modal-footer .subTotal {
   margin: 0 33px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .subTotal p {
+#basketDrop #Basket .modal-dialog .parent .modal-footer .subTotal p {
   margin-bottom: 8px;
   font-size: 20px;
   font-weight: bold;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer button {
+#basketDrop #Basket .modal-dialog .parent .modal-footer button {
   margin: 6px 0 10px 0;
   width: 86.5%;
   padding: 7px 0px;
@@ -464,60 +743,70 @@ header .input-basket .person-basket .baskett {
   font-weight: 550;
   letter-spacing: 2px;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .view {
+#basketDrop #Basket .modal-dialog .parent .modal-footer .view {
   background-color: white;
   color: black;
 }
-#staticBackdrop #SideBasket .modal-dialog .parent .modal-footer .view:hover {
+#basketDrop #Basket .modal-dialog .parent .modal-footer .view:hover {
   color: white;
   background-color: black;
 }
 
-#staticBack {
+#sidebar {
   width: 100%;
 }
-#staticBack #SideBasket {
+#sidebar #Basket {
   display: flex;
   justify-content: end;
 }
-#staticBack #SideBasket .modal-dialog {
+#sidebar #Basket .modal-dialog {
   width: 100%;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body {
+@media screen and (max-width: 990px) {
+  #sidebar #Basket .modal-dialog {
+    max-width: 100%;
+    max-height: 200px;
+    height: 100%;
+  }
+  #sidebar #Basket .modal-dialog .sidebar-body {
+    display: none;
+  }
+}
+#sidebar #Basket .modal-dialog .sidebar-body {
   padding: 16px 48px;
   position: relative;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body h5 {
+#sidebar #Basket .modal-dialog .sidebar-body h5 {
   color: #212529;
   font-weight: bolder;
   margin-bottom: 48px;
   overflow: hidden;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-container {
   position: relative;
   margin-bottom: 2rem;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-container ul {
   color: #868e96;
   position: relative;
   transition: 0.3s;
   list-style: none;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul li {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-container ul li {
   padding: 8px 16px 8px 0;
   align-items: center;
   cursor: pointer;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul li i {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-container ul li i {
   font-size: 12px;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul .active {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-container ul .active {
   transition: 0.3s;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-container ul .active:hover {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-container ul .active:hover {
   color: #bcac76;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-list {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-list {
   margin-left: 1rem;
   display: none;
   position: absolute;
@@ -528,26 +817,26 @@ header .input-basket .person-basket .baskett {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .dropdown-list .dropdown-items:hover {
+#sidebar #Basket .modal-dialog .sidebar-body .dropdown-list .dropdown-items:hover {
   color: #bcac76;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .contact {
+#sidebar #Basket .modal-dialog .sidebar-body .social-media {
   margin-bottom: 24px;
   color: #212529;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .contact i {
+#sidebar #Basket .modal-dialog .sidebar-body .social-media i {
   margin-right: 0.5rem;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body .contact span {
+#sidebar #Basket .modal-dialog .sidebar-body .social-media span {
   font-size: 17.5px;
   font-family: monospace;
 }
-#staticBack #SideBasket .modal-dialog .sidebar-body p {
+#sidebar #Basket .modal-dialog .sidebar-body p {
   color: #868e96;
   font-size: 14px;
   font-weight: 500;
 }
-#staticBack #SideBasket .modal-dialog .parent {
+#sidebar #Basket .modal-dialog .parent {
   border-radius: 0;
   display: flex;
   justify-content: right;
@@ -555,146 +844,146 @@ header .input-basket .person-basket .baskett {
   padding: 0;
   height: 100vh;
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-header {
+#sidebar #Basket .modal-dialog .parent .modal-header {
   border-bottom: none;
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-header button {
+#sidebar #Basket .modal-dialog .parent .modal-header button {
   margin-top: 5px;
   margin-right: 10px;
   font-size: 20px;
   transition: 0.2s;
   font-weight: 200;
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-header button:hover {
+#sidebar #Basket .modal-dialog .parent .modal-header button:hover {
   transform: rotate(90deg);
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-body {
+#sidebar #Basket .modal-dialog .parent .modal-body {
   height: 700px;
   overflow: scroll;
   overflow-x: hidden;
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar {
+#sidebar #Basket .modal-dialog .parent .modal-body::-webkit-scrollbar {
   margin-right: 10px;
   width: 5px;
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-track {
+#sidebar #Basket .modal-dialog .parent .modal-body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
-#staticBack #SideBasket .modal-dialog .parent .modal-body::-webkit-scrollbar-thumb {
+#sidebar #Basket .modal-dialog .parent .modal-body::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
 
-#static {
+#user {
   width: 100%;
   margin-top: 30px;
 }
-#static .modal-header {
+#user .modal-header {
   padding-top: 35px;
   padding-right: 30px;
   border-bottom: none;
 }
-#static #SideBasket {
+#user #Basket {
   display: flex;
   justify-content: center;
 }
-#static #SideBasket .modal-dialog {
+#user #Basket .modal-dialog {
   width: 100%;
 }
-#static #SideBasket .modal-dialog .modal-header {
+#user #Basket .modal-dialog .modal-header {
   border-bottom: none;
 }
-#static #SideBasket .modal-dialog .modal-header button {
+#user #Basket .modal-dialog .modal-header button {
   margin-top: 5px;
   margin-right: 10px;
   font-size: 20px;
   transition: 0.2s;
   font-weight: 200;
 }
-#static #SideBasket .modal-dialog .modal-header button:hover {
+#user #Basket .modal-dialog .modal-header button:hover {
   transform: rotate(90deg);
 }
-#static #SideBasket .modal-dialog .sidebar-body {
+#user #Basket .modal-dialog .sidebar-body {
   padding: 16px 48px 0 48px;
   position: relative;
 }
-#static #SideBasket .modal-dialog .sidebar-body h5 {
+#user #Basket .modal-dialog .sidebar-body h5 {
   font-size: 27px;
   font-weight: bolder;
   padding-bottom: 28px;
   overflow: hidden;
   border-bottom: 1px solid lightgray;
 }
-#static #SideBasket .modal-dialog .sidebar-body h5 span {
+#user #Basket .modal-dialog .sidebar-body h5 span {
   color: gray;
   display: inline-block;
   margin: 0 10px;
   transition: 0.1s;
   cursor: pointer;
 }
-#static #SideBasket .modal-dialog .sidebar-body h5 span:hover {
+#user #Basket .modal-dialog .sidebar-body h5 span:hover {
   color: black;
 }
-#static #SideBasket .modal-dialog .sidebar-body h5 #Login {
+#user #Basket .modal-dialog .sidebar-body h5 #Login {
   color: #bcac76;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage {
+#user #Basket .modal-dialog .sidebar-body .loginPage {
   margin-top: 20px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage .text {
+#user #Basket .modal-dialog .sidebar-body .loginPage .text {
   color: gray;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .inp {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .inp {
   font-size: 19px;
   font-weight: bold;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .inp input {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .inp input {
   border: 1px solid lightgray;
   outline: none;
   width: 100%;
   padding: 6px 10px;
   margin: 0 auto;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs label {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs label {
   width: 100%;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs label p {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs label p {
   font-size: 16px;
   font-weight: bold;
   padding: 0;
   margin-bottom: 10px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs label p input {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs label p input {
   border: 1px solid lightgray;
   outline: none;
   width: 100%;
   padding: 6px 10px;
   margin: 0 auto;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .passs {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .passs {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .passs .forgot {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .passs .forgot {
   display: inline-block;
   padding: 0;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .passs .forgot:nth-child(2) {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .passs .forgot:nth-child(2) {
   color: #9a884b;
   font-size: 15px;
   font-weight: 400;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .passs .forgot:nth-child(2):hover {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .passs .forgot:nth-child(2):hover {
   border-bottom: 1px solid #9a884b;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs .check {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs .check {
   color: gray;
   margin: 5px 0 20px 0;
   cursor: pointer;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs button {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs button {
   width: 100%;
   background-color: white;
   border: 1px solid black;
@@ -702,32 +991,32 @@ header .input-basket .person-basket .baskett {
   margin-bottom: 20px;
   transition: 0.2s;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .inputs button:hover {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .inputs button:hover {
   background-color: black;
   color: white;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .line {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .line {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .line .line {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .line .line {
   width: 45%;
   height: 1px;
   background-color: lightgray;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .line p {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .line p {
   color: gray;
   letter-spacing: 2px;
   font-size: 13px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .icons {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .icons {
   display: flex;
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 50px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .icons i {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .icons i {
   width: 43px;
   height: 42px;
   text-align: center;
@@ -737,77 +1026,77 @@ header .input-basket .person-basket .baskett {
   color: #bcac76;
   transition: 0.4s;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .icons i:hover {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .icons i:hover {
   color: black;
   background-color: #9a884b;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .icons i:nth-child(2) {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .icons i:nth-child(2) {
   border-color: lightgray;
   color: gray;
 }
-#static #SideBasket .modal-dialog .sidebar-body .loginPage form .icons i:nth-child(2):hover {
+#user #Basket .modal-dialog .sidebar-body .loginPage form .icons i:nth-child(2):hover {
   color: white;
   background-color: gray;
 }
-#static #SideBasket .modal-dialog .sidebar-body #registerPage {
+#user #Basket .modal-dialog .sidebar-body #registerPage {
   display: none;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage {
+#user #Basket .modal-dialog .sidebar-body .registerPage {
   margin-top: 20px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage .text {
+#user #Basket .modal-dialog .sidebar-body .registerPage .text {
   color: gray;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .inp {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .inp {
   font-size: 19px;
   font-weight: bold;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .inp input {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .inp input {
   border: 1px solid lightgray;
   outline: none;
   width: 100%;
   padding: 6px 10px;
   margin: 0 auto;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs label {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs label {
   width: 100%;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs label p {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs label p {
   font-size: 16px;
   font-weight: bold;
   padding: 0;
   margin-bottom: 10px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs label p input {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs label p input {
   border: 1px solid lightgray;
   outline: none;
   width: 100%;
   padding: 6px 10px;
   margin: 0 auto;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .passs {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .passs {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .passs .forgot {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .passs .forgot {
   display: inline-block;
   padding: 0;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .passs .forgot:nth-child(2) {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .passs .forgot:nth-child(2) {
   color: #9a884b;
   font-size: 15px;
   font-weight: 400;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .passs .forgot:nth-child(2):hover {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .passs .forgot:nth-child(2):hover {
   border-bottom: 1px solid #9a884b;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs .check {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs .check {
   color: gray;
   margin: 5px 0 20px 0;
   cursor: pointer;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs button {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs button {
   width: 100%;
   background-color: white;
   border: 1px solid black;
@@ -815,32 +1104,32 @@ header .input-basket .person-basket .baskett {
   margin-bottom: 20px;
   transition: 0.2s;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .inputs button:hover {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .inputs button:hover {
   background-color: black;
   color: white;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .line {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .line {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .line .line {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .line .line {
   width: 45%;
   height: 1px;
   background-color: lightgray;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .line p {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .line p {
   color: gray;
   letter-spacing: 2px;
   font-size: 13px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .icons {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .icons {
   display: flex;
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 50px;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .icons i {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .icons i {
   width: 43px;
   height: 42px;
   text-align: center;
@@ -850,167 +1139,167 @@ header .input-basket .person-basket .baskett {
   color: #bcac76;
   transition: 0.4s;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .icons i:hover {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .icons i:hover {
   color: black;
   background-color: #9a884b;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .icons i:nth-child(2) {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .icons i:nth-child(2) {
   border-color: lightgray;
   color: gray;
 }
-#static #SideBasket .modal-dialog .sidebar-body .registerPage form .icons i:nth-child(2):hover {
+#user #Basket .modal-dialog .sidebar-body .registerPage form .icons i:nth-child(2):hover {
   color: white;
   background-color: gray;
 }
 
-#stat {
+#details {
   width: 100%;
 }
-#stat .modal-header {
+#details .modal-header {
   padding-right: 30px;
   border-bottom: none;
 }
-#stat .modal-dialog {
+#details .modal-dialog {
   max-width: 1300px;
 }
-#stat #SideBasket {
+#details #Basket {
   display: flex;
   justify-content: center;
 }
-#stat #SideBasket .modal-dialog {
+#details #Basket .modal-dialog {
   width: 100%;
 }
-#stat #SideBasket .modal-dialog .modal-header {
+#details #Basket .modal-dialog .modal-header {
   border-bottom: none;
 }
-#stat #SideBasket .modal-dialog .modal-header button {
+#details #Basket .modal-dialog .modal-header button {
   margin-right: 10px;
   font-size: 20px;
   transition: 0.2s;
   font-weight: 200;
 }
-#stat #SideBasket .modal-dialog .modal-header button:hover {
+#details #Basket .modal-dialog .modal-header button:hover {
   transform: rotate(90deg);
 }
-#stat #SideBasket .modal-dialog .sidebar-body {
+#details #Basket .modal-dialog .sidebar-body {
   padding: 16px 48px 0 48px;
   position: relative;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .modal-body img {
+#details #Basket .modal-dialog .sidebar-body .modal-body img {
   width: 538px;
   max-height: 538px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .additional-info {
+#details #Basket .modal-dialog .sidebar-body .additional-info {
   padding: 20px;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .slider-nav {
+#details #Basket .modal-dialog .sidebar-body .slider-nav {
   padding-top: 10px;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .slider-for img,
-#stat #SideBasket .modal-dialog .sidebar-body .slider-nav img {
+#details #Basket .modal-dialog .sidebar-body .slider-for img,
+#details #Basket .modal-dialog .sidebar-body .slider-nav img {
   visibility: visible;
   max-width: 100%;
   height: auto !important;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .slider-nav img {
+#details #Basket .modal-dialog .sidebar-body .slider-nav img {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .col-lg-6 h2 {
+#details #Basket .modal-dialog .sidebar-body .col-lg-6 h2 {
   margin-bottom: 1.5rem;
   font-weight: bolder;
   color: #212529;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .text-primary {
+#details #Basket .modal-dialog .sidebar-body .text-primary {
   color: #bcac76 !important;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .text-gray-300 {
+#details #Basket .modal-dialog .sidebar-body .text-gray-300 {
   color: #dee2e6;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .text-uppercase {
+#details #Basket .modal-dialog .sidebar-body .text-uppercase {
   letter-spacing: 0.15em;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-option-heading span {
+#details #Basket .modal-dialog .sidebar-body .detail-option-heading span {
   color: #adb5bd;
   font-family: "vremenagrotesk", sans-serif;
   font-size: 0.8rem;
   font-weight: normal;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-quantity {
+#details #Basket .modal-dialog .sidebar-body .detail-quantity {
   max-width: 5rem;
   text-align: center;
   color: #212529;
   border-radius: 0;
   border-color: #212529;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .btn-dark {
+#details #Basket .modal-dialog .sidebar-body .btn-dark {
   border-radius: 0;
 }
-#stat #SideBasket .modal-dialog .sidebar-body a {
+#details #Basket .modal-dialog .sidebar-body a {
   color: #bcac76;
 }
-#stat #SideBasket .modal-dialog .sidebar-body a:hover {
+#details #Basket .modal-dialog .sidebar-body a:hover {
   color: #817241;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .fab:hover {
+#details #Basket .modal-dialog .sidebar-body .fab:hover {
   color: #817241;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-option-btn-label {
+#details #Basket .modal-dialog .sidebar-body .detail-option-btn-label {
   color: #bcac76;
   border-color: #bcac76;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-option-btn-label:hover {
+#details #Basket .modal-dialog .sidebar-body .detail-option-btn-label:hover {
   color: #212529;
   background-color: #a89454;
   border-color: #a89454;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .input-invisible {
+#details #Basket .modal-dialog .sidebar-body .input-invisible {
   position: absolute;
   width: 1px;
   height: 1px;
   opacity: 0;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .btn {
+#details #Basket .modal-dialog .sidebar-body .btn {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   font-weight: bold;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-option .btn-selectpicker {
+#details #Basket .modal-dialog .sidebar-body .detail-option .btn-selectpicker {
   background-color: #fff;
   color: #495057;
   border: 1px solid #ced4da;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-option-btn-label {
+#details #Basket .modal-dialog .sidebar-body .detail-option-btn-label {
   margin-right: 10px;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-quantity {
+#details #Basket .modal-dialog .sidebar-body .detail-quantity {
   border: 1px solid #ced4da;
   outline: none;
   font-size: 20px;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .btn-dark {
+#details #Basket .modal-dialog .sidebar-body .btn-dark {
   padding: 12px;
   background-color: #343a40;
   color: #fff;
   border: 1px solid #343a40;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .btn-dark:hover {
+#details #Basket .modal-dialog .sidebar-body .btn-dark:hover {
   background-color: #23272b;
   border: 1px solid #23272b;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .text-hover-primary:hover {
+#details #Basket .modal-dialog .sidebar-body .text-hover-primary:hover {
   color: #007bff;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .detail-option .btn-selectpicker {
+#details #Basket .modal-dialog .sidebar-body .detail-option .btn-selectpicker {
   display: none;
 }
-#stat #SideBasket .modal-dialog .sidebar-body select {
+#details #Basket .modal-dialog .sidebar-body select {
   border: 1px solid #ced4da;
   width: 220px;
   padding: 9px 12px;
@@ -1021,13 +1310,13 @@ header .input-basket .person-basket .baskett {
   text-transform: uppercase;
   outline: none;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .btn-selectpicker {
+#details #Basket .modal-dialog .sidebar-body .btn-selectpicker {
   border-color: #817241;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .filter-option {
+#details #Basket .modal-dialog .sidebar-body .filter-option {
   height: 100px;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .fresh {
+#details #Basket .modal-dialog .sidebar-body .fresh {
   background-color: #a89454;
   color: #343a40;
   padding: 2px 6px 6px 6px;
@@ -1037,7 +1326,7 @@ header .input-basket .person-basket .baskett {
   z-index: 100;
   font-size: 14px;
 }
-#stat #SideBasket .modal-dialog .sidebar-body .sale {
+#details #Basket .modal-dialog .sidebar-body .sale {
   background-color: #23272b;
   color: white;
   padding: 4px 6px 6px 6px;
@@ -1045,26 +1334,4 @@ header .input-basket .person-basket .baskett {
   top: 65px;
   left: 25px;
   z-index: 100;
-}
-
-@media (max-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-  }
-  .social-media {
-    display: none;
-  }
-  .right {
-    display: flex;
-    justify-content: space-between;
-  }
-  .right span {
-    margin-left: auto;
-  }
-}
-@media (max-width: 568px) {
-  .right {
-    display: none;
-  }
 }/*# sourceMappingURL=header.css.map */

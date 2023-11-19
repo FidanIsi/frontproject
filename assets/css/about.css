@@ -1,18 +1,18 @@
-#AboutUs,
-#History {
+#Varkala,
+#CompanyHistory {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-top: 70px;
 }
-#AboutUs .line,
-#History .line {
+#Varkala .line,
+#CompanyHistory .line {
   width: 50%;
   margin-top: 0.5rem;
   border-top: solid 1px #495057;
   padding-left: 15px;
 }
-#AboutUs h6,
-#History h6 {
+#Varkala h6,
+#CompanyHistory h6 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.3;
@@ -20,57 +20,70 @@
   color: #BCAC76;
   margin-bottom: 15px;
 }
-#AboutUs h1,
-#AboutUs h2,
-#History h1,
-#History h2 {
+#Varkala h1,
+#Varkala h2,
+#CompanyHistory h1,
+#CompanyHistory h2 {
   font-weight: 700;
   margin-bottom: 3rem;
   font-size: 4.5rem;
   line-height: 1.3;
 }
-#AboutUs p,
-#History p {
+#Varkala p,
+#CompanyHistory p {
   font-size: 1.25rem;
   font-weight: bold;
   color: #868e96;
   line-height: 1.6;
 }
+@media screen and (max-width: 1209px) {
+  #Varkala .line,
+  #CompanyHistory .line {
+    display: none;
+  }
+}
 
-#History {
+#CompanyHistory {
   padding-top: 1.5rem;
 }
-#History .row {
+#CompanyHistory .row {
   margin-bottom: 3rem;
 }
-#History img {
+#CompanyHistory img {
   max-width: 100%;
   height: auto;
 }
-#History .ml-6 {
+#CompanyHistory .ml-6 {
   margin-left: 6rem;
 }
-#History .col-md-6 {
+#CompanyHistory .col-md-6 {
   display: flex;
   align-items: center;
 }
-#History .col-md-6 h6 {
+#CompanyHistory .col-md-6 h6 {
   margin-bottom: 0.25rem;
   color: #868e96;
 }
-#History .col-md-6 h2 {
+#CompanyHistory .col-md-6 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-#History .col-md-6 p {
+#CompanyHistory .col-md-6 p {
   color: #868e96;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
 }
+@media screen and (max-width: 575px) {
+  #CompanyHistory .ml-6 {
+    margin-left: 0;
+  }
+}
 
 #Milestones {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background: #f8f9fa;
 }
 #Milestones .container {
@@ -87,6 +100,7 @@
   font-size: 1.25rem;
   font-weight: bold;
   color: #868e96;
+  margin-bottom: 3rem;
 }
 #Milestones .container .col-lg-6 {
   margin-left: auto;
@@ -136,16 +150,17 @@
   color: #868e96;
 }
 
-#Team {
+#Colleague {
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
-#Team .line {
+#Colleague .line {
   width: 50%;
   margin-top: 0.5rem;
   border-top: solid 1px #495057;
   padding-left: 15px;
 }
-#Team h6 {
+#Colleague h6 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.3;
@@ -153,23 +168,23 @@
   color: #BCAC76;
   margin-bottom: 15px;
 }
-#Team h1 {
+#Colleague h1 {
   font-weight: 700;
   margin-bottom: 1rem;
   font-size: 4.5rem;
   line-height: 1.3;
 }
-#Team p {
+#Colleague p {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
   color: #868e96;
   margin-bottom: 6rem;
 }
-#Team .col-lg-3 {
+#Colleague .col-lg-3 {
   text-align: center;
 }
-#Team .col-lg-3 img {
+#Colleague .col-lg-3 img {
   margin-bottom: 1.5rem;
   height: auto;
   max-width: 80%;
@@ -179,16 +194,21 @@
   box-shadow: none;
   line-height: 3rem;
 }
-#Team .col-lg-3 h4 {
+#Colleague .col-lg-3 h4 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.3;
 }
-#Team .col-lg-3 p {
+#Colleague .col-lg-3 p {
   color: #868e96;
   font-size: 0.875rem;
   font-weight: bold;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 1209px) {
+  #Colleague .line {
+    display: none;
+  }
 }
 
 #Brands {
@@ -246,25 +266,30 @@
   transform: scale(1.5);
 }
 
-#Choice {
+#RightChoice {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-#Choice .col-lg-10 {
+#RightChoice .col-lg-10 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-#Choice .col-lg-10 h2 {
+#RightChoice .col-lg-10 h2 {
   font-size: 2rem;
   font-weight: bolder;
   margin-bottom: 6rem;
 }
-#Choice .ml {
+#RightChoice .ml {
   margin-left: 8%;
 }
-#Choice .col-lg-5 {
+#RightChoice .col-lg-5 {
   color: #868e96;
   font-size: 0.875rem;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 995px) {
+  #RightChoice .ml {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=about.css.map */

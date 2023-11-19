@@ -1,10 +1,10 @@
 var myListElements = document.querySelectorAll(".myList");
 var dropElements = [
-  document.getElementById("homeDrop"),
-  document.getElementById("shopDown"),
-  document.getElementById("iconsDown"),
-  document.getElementById("pagesDown"),
-  document.getElementById("docsDrop"),
+  document.getElementById("homeDropDown"),
+  document.getElementById("shopDropDown"),
+  document.getElementById("iconsDropDown"),
+  document.getElementById("pagesDropDown"),
+  document.getElementById("docsDropDown"),
 ];
 
 function handleClick(index) {
@@ -34,7 +34,7 @@ function handleClick(index) {
 
 document.body.addEventListener("click", function (event) {
   const isDropdown = event.target.closest(
-    ".homeDrop, .shopDown, .iconsDown, .pagesDown, .docsDrop"
+    ".homeDropDown, .shopDropDown, .iconsDropDown, .pagesDropDown, .docsDropDown"
   );
   const isListItem = event.target.closest(".myList");
 
@@ -53,6 +53,15 @@ myListElements.forEach((element, index) => {
   element.addEventListener("click", handleClick(index));
 });
 
+$(document).ready(function () {
+  $(".dropbutton").click(function () {
+    var content = $(this).next(".dropdown-content");
+
+    $(".dropdown-content").not(content).slideUp();
+    content.slideToggle();
+  });
+});
+
 var login = document.querySelector("#Login");
 var register = document.querySelector("#Register");
 var pageLogin = document.querySelector("#loginPage");
@@ -66,4 +75,15 @@ login.addEventListener("click", function () {
 register.addEventListener("click", function () {
   pageLogin.style.display = "none";
   pageRegister.style.display = "block";
+});
+
+$(document).ready(function () {
+  $(".phoneList").click(function () {
+    $("#responsiveness").slideToggle();
+  });
+
+  $(".myListR").click(function () {
+    $(".myListR").not(this).find("li div").slideUp();
+    $(this).find("li div").slideToggle();
+  });
 });

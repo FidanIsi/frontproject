@@ -17,17 +17,6 @@
   <link rel="stylesheet" href="./assets/css/contact.css">
   <link rel="stylesheet" href="./assets/css/footer.css">
   <title>Document</title>
-  <style>
-    #map {
-      height: 776px;
-      width: auto;
-    }
-
-    .leaflet-div-icon {
-      background: black;
-      border: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -42,23 +31,27 @@
         </div>
       </div>
       <div><span>Free in-store delivery</span></div>
-      <div class="right ml-3">
-        <button class="dropbtn">English <i class="fa-solid fa-angle-down"></i></button>
-        <div class="dropdown-content">
-          <a href="#">German</a>
-          <a href="#">French</a>
+      <div class="right ml-3 d-flex">
+        <div class="dropdown">
+          <button class="dropButton">English <i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-content">
+            <a href="#">German</a>
+            <a href="#">French</a>
+          </div>
         </div>
-        <button class="dropbtn">USD <i class="fa-solid fa-angle-down"></i></button>
-        <div class="dropdown-content">
-          <a href="#">EUR</a>
-          <a href="#">GBR</a>
+        <div class="dropdown">
+          <button class="dropButton">USD <i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-content">
+            <a href="#">EUR</a>
+            <a href="#">GBR</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid" style="position: absolute; top: 50px; z-index: 5;">
+    <div class="header2 container-fluid">
       <div class="row">
         <div class="col-lg-7 col-4">
-          <div class="lists">
+          <div class="headerList">
             <ul>
               <li><a class="active" href="./index.html">Varkala</a></li>
               <li class="myList active">
@@ -69,28 +62,34 @@
               <li class="myList">Pages <i class="fa-solid fa-angle-down"></i></li>
               <li class="myList">Docs <i class="fa-solid fa-angle-down"></i></li>
             </ul>
-            <ul class="home-list">
-              <li>Home 1 - Fashion</li>
-              <li>Home 2 - Fashion</li>
-              <li>Home 3 - Design <span> New</span></li>
-              <li>Home 4 - Design <span> New</span></li>
-            </ul>
           </div>
         </div>
-        <div class="col-lg-5 col-4">
+        <div class="icons col-4">
+          <div class="input-basket">
+            <div class="myList person-basket">
+              <i class="person bi bi-person" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#user"></i>
+              <i class="bi bi-heart"></i> <span class="wishlist">3</span>
+              <i class="myList bi bi-basket" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#basketDrop"></i> <span class="basket-size">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="side col-lg-5 col-4">
           <div class="input-basket">
             <div class="search">
               <input type="text" name="search" id="search" placeholder="Search">
               <i class="bi bi-search"></i>
             </div>
-            <div class="myList person-basket" type="button" class="btn btn-primary" data-bs-toggle="modal"
-              data-bs-target="#static">
-              <i class="person bi bi-person"></i>
+            <div class="myList person-basket">
+              <i class="person bi bi-person" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#user"></i>
               <i class="bi bi-heart"></i> <span class="wishlist">3</span>
               <i class="myList bi bi-basket" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"></i> <span class="baskett">0</span>
-              <i class="myList bi bi-list" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#staticBack"></i>
+                data-bs-target="#basketDrop"></i> <span class="basket-size">0</span>
+              <i class="myList bi bi-list baseList" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#sidebar"></i>
+              <i class="phoneList myList bi bi-list"></i>
             </div>
           </div>
         </div>
@@ -98,18 +97,107 @@
     </div>
   </header>
 
+  <div id="responsiveness">
+    <div class="lists">
+      <ul>
+        <li class="myListR active">
+          Home <i class="fa-solid fa-angle-down"></i>
+          <ul>
+            <li>
+              <div id="homeDropdown" class="homeDropdown">
+                <p>Home 1 - Fashion</p>
+                <p>Home 2 - Fashion</p>
+                <p><a href="./index.html">Home 3 - Design <span> New</span></a></p>
+                <p>Home 4 - Design <span> New</span></p>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="myListR">Shop <i class="fa-solid fa-angle-down"></i>
+          <ul>
+            <li class="shopping">
+              <div id="shoppingDropdown" class="homeDropdown">
+                <h6>Shop pages</h6>
+                <p>Full width</p>
+                <p>Full width with category menu</p>
+                <p> Full width with big products</p>
+              </div>
+              <div id="shoppingDropdown" class="homeDropdown">
+                <h6>Product pages</h6>
+                <p>Product with sticky info</p>
+                <p>Product with background</p>
+                <p>Product standart</p>
+              </div>
+            </li>
+          </ul>
+        </li>
+        </li>
+        <li class="myListR">Icons <i class="fa-solid fa-angle-down"></i>
+          <ul>
+            <li class="shopping">
+              <div id="shoppingDropdown" class="homeDropdown">
+                <p>Home 1 - Fashion</p>
+                <p>Home 2 - Fashion</p>
+                <p><a href="./index.html">Home 3 - Design <span> New</span></a></p>
+                <p>Home 4 - Design <span> New</span></p>
+              </div>
+              <div id="shoppingDropdown" class="homeDropdown">
+                <p>Product with sticky info</p>
+                <p>Product with background</p>
+                <p><a href="./index.html">Home 3 - Design <span> New</span></a></p>
+                <p>Home 4 - Design <span> New</span></p>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="myListR">Pages <i class="fa-solid fa-angle-down"></i>
+          <ul>
+            <li class="shopping">
+              <div id="shoppingDropdown" class="homeDropdown">
+                <p><a href="./blog.html">Blog</p>
+                <p><a href="./about.html">About</p>
+                <p><a href="./index.html">Varkala<span> New</span></a></p>
+                <p><a href="./contact.html">Contact <span> New</span></p>
+              </div>
+              <div id="shoppingDropdown" class="homeDropdown">
+                <p>Home 1 - Fashion</p>
+                <p>Home 2 - Fashion</p>
+                <p><a href="./index.html">Home 3 - Design <span> New</span></a></p>
+                <p>Home 4 - Design <span> New</span></p>
+              </div>
 
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            </li>
+          </ul>
+        </li>
+        <li class="myListR">Docs <i class="fa-solid fa-angle-down"></i>
+          <ul>
+            <li class="shopping">
+              <div id="shoppingDropdown" class="homeDropdown">
+                <p>Home 1 - Fashion</p>
+                <p>Home 2 - Fashion</p>
+                <p><a href="./index.html">Home 3 - Design <span> New</span></a></p>
+                <p>Home 4 - Design <span> New</span></p>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="search">
+      <input type="text" name="search" id="search" placeholder="Search">
+      <i class="bi bi-search"></i>
+    </div>
+  </div>
+
+  <div class="modal fade" id="basketDrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <section id="SideBasket">
+    <section id="Basket">
       <div class="modal-dialog m-0 p-0">
         <div class="modal-content parent jsparent">
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-
-
           </div>
           <div class="modal-footer">
             <div class="subTotal">
@@ -126,16 +214,14 @@
     </section>
   </div>
 
-  <div class="modal fade" id="staticBack" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <section id="SideBasket">
+  <div class="modal fade" id="sidebar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-hidden="true">
+    <section id="Basket">
       <div class="modal-dialog m-0 p-0">
         <div class="modal-content parent">
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
           <div class="sidebar-body">
             <h5>Varkala</h5>
             <div class="dropdown-container">
@@ -154,7 +240,7 @@
               </ul>
             </div>
 
-            <div class="contact">
+            <div class="social-media">
               <i class="fa-brands fa-facebook-f"></i>
               <i class="fa-brands fa-twitter"></i>
               <i class="fa-solid fa-phone"></i>
@@ -164,22 +250,19 @@
               out of an
               illustrated magazine and housed in a nice, gilded frame.</p>
           </div>
-
         </div>
       </div>
     </section>
   </div>
 
-  <div class="modal fade" id="static" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <div class="modal fade" id="user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <section id="SideBasket">
+    <section id="Basket">
       <div class="modal-dialog m-0 p-0 ">
         <div class="modal-content parent">
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-
-
           <div class="sidebar-body">
             <h5>
               <span id="Login">Login</span>
@@ -197,7 +280,8 @@
                     <p class="forgot">Password</p>
                     <p class="forgot">forgot passworw</p>
                   </label>
-                  <p class="inp"><input type="password" name="pass" id="pass" placeholder="Password"></p>
+                  <p class="inp"><input type="password" name="pass" id="pass" placeholder="Password">
+                  </p>
 
                   <label class="check" for="check">
                     <input type="checkbox" name="check" id="check">
@@ -266,18 +350,17 @@
     </section>
   </div>
 
-
-  <section id="dropDown">
-    <div id="homeDrop" class="homeDrop animate__animated">
+  <section id="dropDownList">
+    <div id="homeDropDown" class="homeDropDown animate__animated">
       <p>Home 1 - Fashion</p>
       <p>Home 2 - Fashion</p>
       <p><a href="./index.html">Home 3 - Design <span> New</span></a></p>
       <p>Home 4 - Design <span> New</span></p>
     </div>
 
-    <div id="shopDown" class="shopDown animate__animated">
-      <div class="parent">
-        <div class="pages">
+    <div id="shopDropDown" class="shopDropDown animate__animated">
+      <div class="content">
+        <div class="left">
           <p class="title">Shop pages</p>
           <p>Full width</p>
           <p>Full width with category menu</p>
@@ -287,7 +370,7 @@
           <p>Fixed width & masonary layout <span>New</span></p>
           <p>Subcategory</p>
         </div>
-        <div class="proPages">
+        <div class="right">
           <p class="title">Product pages</p>
           <p>Product with sticky info</p>
           <p>Product with background</p>
@@ -299,83 +382,83 @@
       </div>
     </div>
 
-    <div id="iconsDown" class="iconsDown animate__animated w-50 m-0 p-0 pt-3">
+    <div id="iconsDropDown" class="iconsDropDown animate__animated w-50 m-0 p-0 pt-3">
       <div class="container-fluid m-0 p-0">
         <div class="row p-0 m-0">
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/jeans_7764707.png" alt=""></p>
-              <p class="dress">Trousers</p>
+              <p class="product-names">Trousers</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/jacket_3515805.png" alt=""></i></p>
-              <p class="dress">Jackets</p>
+              <p class="product-names">Jackets</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/tshirt_6137585.png" alt=""></i></p>
-              <p class="dress">T-Shirts</p>
+              <p class="product-names">T-Shirts</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/tshirt_7452295.png" alt=""></i></p>
-              <p class="dress">Shirts</p>
+              <p class="product-name">Shirts</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/sweater_1140145.png" alt=""></i></p>
-              <p class="dress">Pullovers</p>
+              <p class="product-name">Pullovers</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/scarf_3111997.png" alt=""></i></p>
-              <p class="dress">Scarfs</p>
+              <p class="product-name">Scarfs</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/shorts_902445.png" alt=""></p>
-              <p class="dress">Shorts</p>
+              <p class="product-name">Shorts</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/swim-shorts_5406873.png" alt=""></p>
-              <p class="dress">Underwear</p>
+              <p class="product-name">Underwear</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/smartwatch_640216.png" alt=""></p>
-              <p class="dress">Watches</p>
+              <p class="product-name">Watches</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/briefcase_2636174.png" alt=""></p>
-              <p class="dress">Bags</p>
+              <p class="product-name">Bags</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/baseball-hat_1446634.png" alt=""></p>
-              <p class="dress">Caps</p>
+              <p class="product-name">Caps</p>
             </div>
           </div>
           <div class="col-2">
             <div class="icon-name">
               <p><img src="./assets/images/bow-tie_2987555.png" alt=""></p>
-              <p class="dress">Accessories</p>
+              <p class="product-name">Accessories</p>
             </div>
           </div>
 
-          <div class="col-12 bottomText mt-4">
+          <div class="col-12 discount mt-4">
             <p>Don't miss our biggest sales this year. Use the code "SUMMER35" at checkout until Jun. 15!
             </p>
           </div>
@@ -383,22 +466,22 @@
       </div>
     </div>
 
-    <div id="pagesDown" class="pagesDown animate__animated">
+    <div id="pagesDropDown" class="pagesDropDown animate__animated">
       <div class="container-fluid">
         <div class="row">
           <div class="col-3">
-            <div class="image-info">
+            <div class="page-info">
               <div class="image">
                 <img src="./assets/images/christopher-campbell-28571-unsplash.jpg" alt="">
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>Homepage</h4>
                 <p>Home 1 - Fashion</p>
                 <p>Home 2 - Fashion</p>
                 <p>Home 3 - Design <span>New</span></p>
                 <p>Home 4 - Design <span>New</span></p>
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>Category</h4>
                 <p>Full width</p>
                 <p>Full width with category menu</p>
@@ -415,7 +498,7 @@
               <div class="image">
                 <img src="./assets/images/ian-dooley-347962-unsplash.jpg" alt="">
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>Order process</h4>
                 <p>Shopping cart</p>
                 <p>Checkout - Five steps<span>New</span></p>
@@ -423,7 +506,7 @@
                 <p>Checkout - confirmed</p>
                 <p>Wishlist</p>
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>Product</h4>
                 <p>Product with sticky info</p>
                 <p>Product with background</p>
@@ -436,13 +519,13 @@
               <div class="image">
                 <img src="./assets/images/ian-dooley-347942-unsplash.jpg" alt="">
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>Blog</h4>
                 <p><a href="./blog.html">Blog</a></p>
                 <p>Blog -Masonry</p>
                 <p>Post</p>
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>About</h4>
                 <p><a href="./about.html">About - Company <span>New</span></a></p>
                 <p>About v.2 - Person <span>New</span></p>
@@ -457,7 +540,7 @@
               <div class="image">
                 <img src="./assets/images/photo-1534126511673-b6899657816a.jpg" alt="">
               </div>
-              <div class="info-1">
+              <div class="info">
                 <h4>Customer</h4>
                 <p>Login/sign up <span>New</span></p>
                 <p>Orders <span>New</span></p>
@@ -473,7 +556,7 @@
       </div>
     </div>
 
-    <div id="docsDrop" class="docsDrop animate__animated">
+    <div id="docsDropDown" class="docsDropDown animate__animated">
       <p>Introduction</p>
       <p>Directory structure</p>
       <p>Gulp</p>
@@ -486,10 +569,10 @@
 
   </section>
 
-  <section id="Hero">
-
-    <div class="circle"></div>
-    <img class="paralax" src="./contact-assets/images/HM-services-removebg-preview.png" alt="Blog">
+  <section id="Parallax">
+    <div class="circle-parallax">
+      <img class="parallax" src="./contact-assets/images/HM-services-removebg-preview.png" alt="Blog">
+    </div>
 
     <div class="container">
       <p><span class="gold">Home</span> <span class="stick"> </span> <span>Contact</span></p>
@@ -502,16 +585,16 @@
   <section id="Contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4">
           <h4>Address</h4>
           <p>13/25 New Avenue<br>New Heaven, 45Y 73J<br>England, <strong>Great Britain</strong></p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4">
           <h4>Call center</h4>
           <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p><strong>+33 555 444 333</strong></p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 col-md-4">
           <h4>Electronic support</h4>
           <p>Please feel free to write an email to us or to use our electronic ticketing system.</p>
           <ul>
@@ -523,50 +606,50 @@
     </div>
   </section>
 
-  <section id="Stores">
+  <section id="Location">
     <div class="row">
       <div class="col-lg-6 pr-0">
         <div id="map"></div>
       </div>
-      <div class="col-lg-6 location">
+      <div class="col-lg-6 stores">
         <h2>Our stores</h2>
         <div class="row">
-          <div class="col-lg-3 pr-0">
+          <div class="col-lg-3 pr-0 col-6">
             <h4>New York</h4>
           </div>
-          <div class="col-lg-3">13/25 New Avenue, New Heaven, 45Y 73J</div>
-          <div class="col-lg-3">564546 54566 54</div>
-          <div class="col-lg-3">email@email.com</div>
+          <div class="col-lg-3 col-6">13/25 New Avenue, New Heaven, 45Y 73J</div>
+          <div class="col-lg-3 col-6">564546 54566 54</div>
+          <div class="col-lg-3 col-6">email@email.com</div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-6">
             <h4>London</h4>
           </div>
-          <div class="col-lg-3">13/25 New Avenue, New Heaven, 45Y 73J</div>
-          <div class="col-lg-3">564546 54566 54</div>
-          <div class="col-lg-3">email@email.com</div>
+          <div class="col-lg-3 col-6">13/25 New Avenue, New Heaven, 45Y 73J</div>
+          <div class="col-lg-3 col-6">564546 54566 54</div>
+          <div class="col-lg-3 col-6">email@email.com</div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-6">
             <h4>Paris</h4>
           </div>
-          <div class="col-lg-3">13/25 New Avenue, New Heaven, 45Y 73J</div>
-          <div class="col-lg-3">564546 54566 54</div>
-          <div class="col-lg-3">email@email.com</div>
+          <div class="col-lg-3 col-6">13/25 New Avenue, New Heaven, 45Y 73J</div>
+          <div class="col-lg-3 col-6">564546 54566 54</div>
+          <div class="col-lg-3 col-6">email@email.com</div>
         </div>
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-6">
             <h4>Tokyo</h4>
           </div>
-          <div class="col-lg-3">13/25 New Avenue, New Heaven, 45Y 73J</div>
-          <div class="col-lg-3">564546 54566 54</div>
-          <div class="col-lg-3">email@email.com</div>
+          <div class="col-lg-3 col-6">13/25 New Avenue, New Heaven, 45Y 73J</div>
+          <div class="col-lg-3 col-6">564546 54566 54</div>
+          <div class="col-lg-3 col-6">email@email.com</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="GetInTouch">
+  <section id="ReachingOut">
     <div class="container">
       <div class="row">
         <div class="col-lg-3">
@@ -615,28 +698,28 @@
     <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-6">
             <i class="fa fa-truck" aria-hidden="true"></i>
             <div class="content">
               <h6>Free shipping & return</h6>
               <p>Free Shipping over $300</p>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-6">
             <i class="bi bi-currency-exchange"></i>
             <div class="content">
               <h6>Money back guarantee</h6>
               <p>30 Days Money Back Guarantee</p>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-6">
             <i class="bi bi-coin"></i>
             <div class="content">
               <h6>Best prices</h6>
               <p>Always the best prices</p>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-6">
             <i class="bi bi-person"></i>
             <div class="content">
               <h6>020-800-456-747</h6>
@@ -655,12 +738,15 @@
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               <br>At itaque temporibus.
             </p>
-            <form action="">
-              <input type="text" placeholder="Your Email address">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-            </form>
+            <div class="form">
+              <form action="">
+                <input type="text" placeholder="Your Email address">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </form>
+            </div>
+
           </div>
-          <div class="col-lg-7">
+          <div class="notResponsive col-lg-7">
             <div class="col-lg-4">
               <h6>Shop</h6>
               <ul class="list">
@@ -692,6 +778,58 @@
               </ul>
             </div>
           </div>
+          <div class="responsive-content">
+            <div class="title-info">
+              <div class="title">
+                <h5>Blog</h5>
+                <i class="upY fa-solid fa-minus"></i>
+                <i class="rightX fa-solid fa-minus"></i>
+              </div>
+              <div class="info" style="display: none;">
+                <div>
+                  <ul>
+                    <li>For Women</li>
+                    <li>For Men</li>
+                    <li>Stores</li>
+                    <li>Our blog</li>
+                    <li>Shop</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="title">
+                <h5>Company</h5>
+                <i class="upY fa-solid fa-minus"></i>
+                <i class="rightX fa-solid fa-minus"></i>
+              </div>
+              <div class="info" style="display: none;">
+                <div>
+                  <ul>
+                    <li>Login</li>
+                    <li>Register</li>
+                    <li>Wishlist</li>
+                    <li>Our Products</li>
+                    <li>Checkouts</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="title">
+                <h5>Your account</h5>
+                <i class="upY fa-solid fa-minus"></i>
+                <i class="rightX fa-solid fa-minus"></i>
+              </div>
+              <div class="info" style="display: none;">
+                <div>
+                  <ul>
+                    <li>Login</li>
+                    <li>Register</li>
+                    <li>Wishlist</li>
+                    <li>Our Products</li>
+                    <li>Checkouts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -713,16 +851,22 @@
     </div>
   </footer>
 
-
 </body>
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js">
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
 </script>
-
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./assets/js/index.js"></script>
 <script src="./assets/js/basket.js"></script>
 <script src="./contact-assets/js/contact.js"></script>
 <script src="./assets/js/header.js"></script>

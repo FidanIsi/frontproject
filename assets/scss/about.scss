@@ -1,5 +1,5 @@
-#AboutUs,
-#History {
+#Varkala,
+#CompanyHistory {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-top: 70px;
@@ -34,9 +34,17 @@
     color: #868e96;
     line-height: 1.6;
   }
+
+  @media screen and (max-width: 1209px) {
+    .line {
+      display: none;
+    }
+  }
+
+  ;
 }
 
-#History {
+#CompanyHistory {
   padding-top: 1.5rem;
 
   .row {
@@ -74,9 +82,17 @@
       line-height: 1.6;
     }
   }
+
+  @media screen and (max-width: 575px) {
+    .ml-6 {
+      margin-left: 0;
+    }
+  }
 }
 
 #Milestones {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background: #f8f9fa;
 
   .container {
@@ -95,6 +111,7 @@
         font-size: 1.25rem;
         font-weight: bold;
         color: #868e96;
+        margin-bottom: 3rem;
       }
     }
 
@@ -158,7 +175,8 @@
   }
 }
 
-#Team {
+#Colleague {
+  padding-top: 3rem;
   padding-bottom: 3rem;
 
   .line {
@@ -219,6 +237,14 @@
       margin-bottom: 3rem;
     }
   }
+
+  @media screen and (max-width: 1209px) {
+    .line {
+      display: none;
+    }
+  }
+
+  ;
 }
 
 #Brands {
@@ -283,7 +309,7 @@
 
 }
 
-#Choice {
+#RightChoice {
   padding-top: 6rem;
   padding-bottom: 6rem;
 
@@ -307,5 +333,11 @@
     color: #868e96;
     font-size: .875rem;
     margin-bottom: 1rem;
+  }
+
+  @media screen and (max-width:995px) {
+    .ml {
+      margin-left: 0;
+    }
   }
 }

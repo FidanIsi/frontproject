@@ -1,6 +1,4 @@
-var image = document.getElementsByClassName('paralax');
+var image = document.getElementsByClassName("parallax");
 new simpleParallax(image, {
-	orientation: 'down',
+  orientation: "down",
 });
-
-

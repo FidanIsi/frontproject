@@ -1,12 +1,20 @@
-.leke {
+.blob {
   width: 1000px;
   position: absolute;
   top: -450px;
   left: -450px;
 }
 
+@media screen and (max-width: 1240px) {
+  .blob {
+    width: 600px;
+    top: -200px;
+    left: -300px;
+    z-index: -1;
+  }
+}
 #Slider {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 #Slider .swiper-slide .title-text-button {
   position: relative;
@@ -16,7 +24,7 @@
   position: relative;
   z-index: 1;
 }
-#Slider .swiper-slide .title-text-button .back {
+#Slider .swiper-slide .title-text-button .blob {
   width: 550px;
   position: absolute;
   top: -100px;
@@ -59,54 +67,168 @@
   margin-left: 100px;
   width: 50%;
 }
-
-#Choices {
-  margin-top: 50p;
+@media screen and (max-width: 990px) {
+  #Slider .swiper-slide {
+    padding-bottom: 50px;
+  }
+  #Slider .swiper-slide .title-text-button {
+    position: relative;
+    z-index: 1;
+    left: 70px !important;
+  }
+  #Slider .swiper-slide .title-text-button .blob {
+    display: none;
+    width: 330px;
+    position: absolute;
+    top: -110px;
+    display: none;
+    left: 240px;
+  }
+  #Slider .swiper-slide .title-text-button h3 {
+    font-size: 15px !important;
+    font-weight: 400;
+    width: 100%;
+    margin-right: 300px !important;
+    text-transform: uppercase;
+  }
+  #Slider .swiper-slide .title-text-button h1 {
+    font-size: 30px !important;
+    margin: 19px 0;
+    width: 100%;
+    line-height: 33px;
+  }
+  #Slider .swiper-slide .title-text-button p {
+    margin: 19px 0;
+    width: 100% !important;
+    font-weight: 600;
+    font-size: 13px !important;
+    color: gray;
+  }
+  #Slider .swiper-slide .title-text-button button {
+    margin-top: 10px;
+    padding: 5px 18px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #bcac76;
+    color: #bcac76;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  #Slider .swiper-slide .title-text-button button:hover {
+    background-color: #bcac76;
+    color: black;
+  }
+  #Slider .swiper-slide .image img {
+    position: relative;
+    z-index: 2;
+    margin-left: 30px !important;
+    width: 60% !important;
+  }
 }
-#Choices .caption {
+@media screen and (max-width: 1233px) {
+  #Slider .swiper-slide {
+    padding-bottom: 50px;
+  }
+  #Slider .swiper-slide .title-text-button {
+    position: relative;
+    z-index: 1;
+    top: 70px;
+    left: 180px;
+    margin-bottom: 70px;
+  }
+  #Slider .swiper-slide .title-text-button .blob {
+    width: 330px;
+    position: absolute;
+    top: -80px;
+    left: 440px;
+  }
+  #Slider .swiper-slide .title-text-button h3 {
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  #Slider .swiper-slide .title-text-button h1 {
+    font-size: 40px;
+    margin: 19px 0;
+    width: 90%;
+    line-height: 30px;
+  }
+  #Slider .swiper-slide .title-text-button p {
+    margin: 19px 0;
+    width: 90%;
+    font-weight: 600;
+    color: gray;
+  }
+  #Slider .swiper-slide .title-text-button button {
+    margin-top: 10px;
+    padding: 5px 18px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid #bcac76;
+    color: #bcac76;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  #Slider .swiper-slide .title-text-button button:hover {
+    background-color: #bcac76;
+    color: black;
+  }
+  #Slider .swiper-slide .image img {
+    position: relative;
+    z-index: 2;
+    margin-left: 100px;
+    width: 50%;
+  }
+}
+
+#TopChoices {
+  margin-top: 3rem;
+  margin-top: 3rem;
+}
+#TopChoices .choice {
   margin-bottom: 30px;
 }
-#Choices .caption h4 {
+#TopChoices .choice h4 {
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: gray;
+  color: #868e96;
   font-weight: 600;
 }
-#Choices .caption h2 {
+#TopChoices .choice h2 {
   font-weight: bold;
   margin: 10px 0;
 }
-#Choices .caption p {
+#TopChoices .choice p {
   font-size: 20px;
   font-weight: 400;
   width: 60%;
-  color: gray;
+  color: #868e96;
 }
-#Choices .image-title {
+#TopChoices .image-title {
   margin-top: 50px;
   margin-bottom: 80px;
   transition: 0.4s;
 }
-#Choices .image-title:hover {
+#TopChoices .image-title:hover {
   transform: scale(1.1);
 }
-#Choices .image-title .image img {
+#TopChoices .image-title .image img {
   width: 80%;
 }
-#Choices .image-title .title {
+#TopChoices .image-title .title {
   margin-left: 18px;
 }
-#Choices .image-title .title h3 {
+#TopChoices .image-title .title h3 {
   width: 20%;
   font-weight: bold;
 }
-#Choices .image-title .title p {
+#TopChoices .image-title .title p {
   font-size: 18px;
   font-weight: 600;
   color: gray;
 }
-#Choices .image-title .title button {
+#TopChoices .image-title .title button {
   border: none;
   background-color: white;
   text-transform: uppercase;
@@ -114,37 +236,37 @@
   font-weight: bold;
   letter-spacing: 5px;
 }
-#Choices .title-image {
+#TopChoices .title-image {
   display: flex;
   margin-top: 30px;
   margin-bottom: 80px;
   transition: 0.4s;
 }
-#Choices .title-image:hover {
+#TopChoices .title-image:hover {
   transform: scale(1.06);
 }
-#Choices .title-image .image {
+#TopChoices .title-image .image {
   position: relative;
   right: 60px;
 }
-#Choices .title-image .image img {
+#TopChoices .title-image .image img {
   width: 110%;
 }
-#Choices .title-image .title {
+#TopChoices .title-image .title {
   z-index: 1;
   margin-top: 80px;
   margin-left: 18px;
 }
-#Choices .title-image .title h3 {
+#TopChoices .title-image .title h3 {
   width: 20%;
   font-weight: bold;
 }
-#Choices .title-image .title p {
+#TopChoices .title-image .title p {
   font-size: 18px;
   font-weight: 600;
   color: gray;
 }
-#Choices .title-image .title button {
+#TopChoices .title-image .title button {
   border: none;
   background-color: transparent;
   text-transform: uppercase;
@@ -153,24 +275,29 @@
   letter-spacing: 5px;
 }
 
-#DealOfWeak {
+#Countdown {
   background-color: #ebf7ff;
   padding: 20px 0;
   position: relative;
 }
-#DealOfWeak .leke {
+@media screen and (max-width: 990px) {
+  #Countdown .blob {
+    display: none;
+  }
+}
+#Countdown .blob {
   width: 900px;
   position: absolute;
   top: -200px;
   left: -370px;
 }
-#DealOfWeak .info-time {
+#Countdown .info-time {
   z-index: -2;
 }
-#DealOfWeak .info-time .info {
+#Countdown .info-time .info {
   z-index: 1;
 }
-#DealOfWeak .info-time .info h5 {
+#Countdown .info-time .info h5 {
   letter-spacing: 7px;
   font-weight: bold;
   padding: 20px 0 10px 0;
@@ -178,20 +305,20 @@
   font-size: 17px;
   color: #dc3545 !important;
 }
-#DealOfWeak .info-time .info h1 {
+#Countdown .info-time .info h1 {
   font-weight: bold;
 }
-#DealOfWeak .info-time .info p {
+#Countdown .info-time .info p {
   font-family: monospace;
   font-weight: 500;
   color: gray;
 }
-#DealOfWeak .info-time .info p .deleted {
+#Countdown .info-time .info p .deleted {
   display: inline-block;
   margin-right: 18px;
   text-decoration: line-through;
 }
-#DealOfWeak .info-time .info .discount {
+#Countdown .info-time .info .discount {
   padding: 10px;
   border-radius: 8px;
   font-size: 14px;
@@ -200,13 +327,13 @@
   background-color: #dc3545;
   color: white;
 }
-#DealOfWeak .info-time .time {
+#Countdown .info-time .time {
   padding-bottom: 25 px;
 }
-#DealOfWeak .info-time .time #countdown {
+#Countdown .info-time .time #timer {
   margin-top: 10px;
 }
-#DealOfWeak .info-time .time #countdown ul {
+#Countdown .info-time .time #timer ul {
   display: flex;
   list-style: none;
   background-color: white;
@@ -215,20 +342,20 @@
   padding: 20px 20px 20px 10px;
   box-shadow: 1px 1px 20px 0 gray;
 }
-#DealOfWeak .info-time .time #countdown ul li {
+#Countdown .info-time .time #timer ul li {
   margin: 0 auto;
   font-size: 13px;
   font-weight: 600;
   color: gray;
 }
-#DealOfWeak .info-time .time #countdown ul li span {
+#Countdown .info-time .time #timer ul li span {
   color: black;
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 5px;
   display: block;
 }
-#DealOfWeak .info-time .time button {
+#Countdown .info-time .time button {
   background-color: transparent;
   border: 1px solid black;
   padding: 6px 18px;
@@ -240,47 +367,57 @@
   color: black;
   transition: 0.4s;
 }
-#DealOfWeak .info-time .time button:hover {
+#Countdown .info-time .time button:hover {
   background-color: black;
   color: white;
 }
-#DealOfWeak .image {
+#Countdown .image {
   margin-left: 20px;
 }
-#DealOfWeak .image img {
+@media screen and (max-width: 990px) {
+  #Countdown .image {
+    text-align: center;
+  }
+}
+#Countdown .image img {
   width: 300px;
 }
 
-#Arrivals {
+#Products {
   margin-top: 60px;
   position: relative;
   overflow: hidden;
 }
-#Arrivals .leke {
+#Products .blob {
   width: 1000px;
   position: absolute;
   top: 230px;
   left: 900px;
 }
-#Arrivals .caption h2 {
+#Products .caption h2 {
   font-weight: bold;
 }
-#Arrivals .caption p {
+#Products .caption p {
   font-size: 19px;
   font-weight: 400;
   color: gray;
   width: 90%;
 }
-#Arrivals .filter ul {
+#Products .product-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Products .product-filter .filter ul {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#Arrivals .filter ul .active {
+#Products .product-filter .filter ul .active {
   color: black;
 }
-#Arrivals .filter ul li {
+#Products .product-filter .filter ul li {
   font-size: 16px;
   font-weight: 500;
   color: gray;
@@ -288,16 +425,15 @@
   padding: 0 6px;
   transition: color 0.3s;
 }
-#Arrivals .filter ul li:hover {
+#Products .product-filter .filter ul li:hover {
   color: black;
   border-bottom: 1px solid black;
 }
-#Arrivals .products {
+#Products .product-filter .products {
   display: flex;
-  justify-content: end;
-  margin-top: 3px;
+  justify-content: flex-end;
 }
-#Arrivals .products h5 {
+#Products .product-filter .products h5 {
   color: #bcac76;
   font-size: 12px;
   text-transform: uppercase;
@@ -305,33 +441,43 @@
   font-weight: bold;
   transition: color 0.4s;
 }
-#Arrivals .products h5:hover {
+#Products .product-filter .products h5:hover {
   color: rgb(150, 130, 64);
   border-bottom: 1px solid rgb(150, 130, 64);
 }
-#Arrivals .image-title-price {
+@media screen and (max-width: 768px) {
+  #Products .product-filter .products {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #Products .product-filter {
+    display: block;
+  }
+}
+#Products .image-title-price {
   margin-top: 20px;
   transition: 0.4s;
 }
-#Arrivals .image-title-price .image {
+#Products .image-title-price .image {
   position: relative;
   overflow: hidden;
 }
-#Arrivals .image-title-price .image img {
+#Products .image-title-price .image img {
   margin: 10px;
   width: 100%;
   top: 40px;
   transition: 0.5s;
   opacity: 1;
 }
-#Arrivals .image-title-price .image .up {
+#Products .image-title-price .image .up {
   opacity: 0;
   transition: 0.5s;
   top: 0;
   left: 0;
   position: absolute;
 }
-#Arrivals .image-title-price .image .cart-detail {
+#Products .image-title-price .image .cart-detail {
   transition: 0.3s;
   opacity: 0;
   position: relative;
@@ -342,85 +488,97 @@
   margin-top: 10px;
   justify-content: space-between;
 }
-#Arrivals .image-title-price .image .cart-detail .cart p {
+#Products .image-title-price .image .cart-detail .cart p {
   font-size: 12px;
   font-weight: 600;
   margin-top: 5px;
 }
-#Arrivals .image-title-price .image .cart-detail .cart p:hover {
+#Products .image-title-price .image .cart-detail .cart p:hover {
   cursor: pointer;
   border-bottom: 1px solid black;
 }
-#Arrivals .image-title-price .image .cart-detail .detail i {
+#Products .image-title-price .image .cart-detail .detail i {
   padding: 0 5px;
   transition: 0.4s;
 }
-#Arrivals .image-title-price .image .cart-detail .detail i:hover {
+#Products .image-title-price .image .cart-detail .detail i:hover {
   cursor: pointer;
   color: #bcac76;
 }
-#Arrivals .image-title-price .title {
+#Products .image-title-price .title {
   transition: 0.3s;
   position: relative;
   left: 11px;
   top: -70px;
 }
-#Arrivals .image-title-price .title h6 {
+#Products .image-title-price .title h6 {
   font-size: 16px;
   font-weight: bold;
 }
-#Arrivals .image-title-price .title .info {
+#Products .image-title-price .title .info {
   display: flex;
   justify-content: space-between;
 }
-#Arrivals .image-title-price .title .info .price {
+#Products .image-title-price .title .info .price {
   font-family: monospace;
   font-weight: bold;
   font-size: 15px;
   color: gray;
 }
-#Arrivals .image-title-price .title .info .stars {
+#Products .image-title-price .title .info .stars {
   transition: 0.3s;
   padding-right: 15px;
   opacity: 0;
   margin-top: 10px;
 }
-#Arrivals .image-title-price .title .info .stars i {
+#Products .image-title-price .title .info .stars i {
   font-size: 12px;
   padding: 0;
   color: #bcac76;
 }
-#Arrivals .image-title-price .title .info .stars .gray {
+#Products .image-title-price .title .info .stars .gray {
   color: #868e96;
 }
-#Arrivals .image-title-price:hover .image img {
+#Products .image-title-price:hover .image img {
   opacity: 0;
 }
-#Arrivals .image-title-price:hover .image .up {
+#Products .image-title-price:hover .image .up {
   opacity: 1;
 }
-#Arrivals .image-title-price:hover .cart-detail {
+#Products .image-title-price:hover .cart-detail {
   opacity: 1;
   margin-top: 0;
 }
-#Arrivals .image-title-price:hover .title {
+#Products .image-title-price:hover .title {
   top: -60px;
 }
-#Arrivals .image-title-price:hover .title .info .stars {
+#Products .image-title-price:hover .title .info .stars {
   opacity: 1;
   margin-top: 0;
 }
 
-#Summer {
+#SummerDeal {
   position: relative;
 }
-#Summer .leke {
+@media screen and (max-width: 991px) {
+  #SummerDeal .blob {
+    display: none;
+  }
+  #SummerDeal .summer-discount h1 {
+    font-size: 50px !important;
+    font-weight: bold;
+  }
+  #SummerDeal .summer-discount h5 {
+    font-size: 25px !important;
+  }
+}
+#SummerDeal .blob {
   width: 600px;
   position: absolute;
   top: -150px;
   left: -330px;
 }
-#Summer .summer-discount {
+#SummerDeal .discount {
   overflow: hidden;
   position: relative;
   display: flex;
@@ -430,16 +588,16 @@
   height: 440px;
   background-color: #eae0bd;
 }
-#Summer .summer-discount h1 {
+#SummerDeal .discount h1 {
   font-size: 80px;
   font-weight: bold;
 }
-#Summer .summer-discount h5 {
+#SummerDeal .discount h5 {
   padding: 15px 0;
   font-size: 35px;
   font-weight: 400;
 }
-#Summer .summer-discount button {
+#SummerDeal .discount button {
   margin-top: 25px;
   font-weight: 600;
   background-color: transparent;
@@ -448,16 +606,21 @@
   padding: 10px 20px;
   transition: 0.4s;
 }
-#Summer .summer-discount button:hover {
+#SummerDeal .discount button:hover {
   background-color: black;
   color: white;
 }
-#Summer .image {
+#SummerDeal .image {
   position: absolute;
   width: 249px;
   top: -50px;
   right: 180px;
 }
-#Summer .image img {
+@media screen and (max-width: 991px) {
+  #SummerDeal .image {
+    display: none;
+  }
+}
+#SummerDeal .image img {
   width: 100%;
 }/*# sourceMappingURL=index.css.map */
