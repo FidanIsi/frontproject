@@ -16,7 +16,6 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/header.css">
   <link rel="stylesheet" href="./assets/css/index.css">
@@ -89,7 +88,7 @@
               <i class="person bi bi-person"></i>
               <i class="bi bi-heart"></i> <span class="wishlist">3</span>
               <i class="myList bi bi-basket" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"></i> <span class="baskett">3</span>
+                data-bs-target="#staticBackdrop"></i> <span class="baskett">0</span>
               <i class="myList bi bi-list" type="button" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#staticBack"></i>
             </div>
@@ -104,39 +103,18 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <section id="SideBasket">
       <div class="modal-dialog m-0 p-0">
-        <div class="modal-content parent">
+        <div class="modal-content parent jsparent">
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="products">
-              <div class="image">
-                <img src="./assets/images/product-square-ian-dooley-347968-unsplash.jpg" alt="">
-              </div>
-              <div class="name-price">
-                <p class="name">Skull Tee</p>
-                <p class="quantity">Quantity: <span class="baseCount">1</span></p>
-                <p class="name" style="font-family: monospace;">&75.00</p>
-              </div>
-              <div class="xBtn btn-close"></div>
-            </div>
-            <div class="products">
-              <div class="image">
-                <img src="./assets/images/product-square-ian-dooley-347968-unsplash.jpg" alt="">
-              </div>
-              <div class="name-price">
-                <p class="name">Skull Tee</p>
-                <p class="quantity">Quantity: <span class="baseCount">1</span></p>
-                <p class="name" style="font-family: monospace;">&75.00</p>
-              </div>
-              <div class="xBtn btn-close"></div>
-            </div>
+
 
           </div>
           <div class="modal-footer">
             <div class="subTotal">
               <p>Subtotal:</p>
-              <p class="total">$180.00</p>
+              <p class="total"><span class="total_price">0</span></p>
             </div>
             <button class="view">View Cart</button>
             <button>Checkout</button>
@@ -911,7 +889,7 @@
               sections
             </p>
           </div>
-          <div class="row mt-5 mb-5 gx-5">
+          <div class="parentItem row mt-5 mb-5 gx-5">
             <div class="col-8">
               <div class="filter">
                 <ul>
@@ -929,8 +907,8 @@
               </div>
             </div>
 
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="1" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/chair.jpg" alt="Product">
@@ -950,7 +928,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">40.00</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -962,8 +940,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="2" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/book.jpg" alt="Product">
@@ -974,8 +952,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -983,7 +960,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">40.00</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -995,8 +972,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="3" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/chair2.jpg" alt="Product">
@@ -1007,8 +984,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -1016,7 +992,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">40.00</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -1028,8 +1004,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="4" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/chair3.jpg" alt="Product">
@@ -1040,8 +1016,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -1049,7 +1024,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">40.00</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -1061,8 +1036,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="5" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/clock.jpg" alt="Product">
@@ -1073,8 +1048,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -1082,7 +1056,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">70</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -1094,8 +1068,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="6" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/clock3.jpg" alt="Product">
@@ -1106,8 +1080,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -1115,7 +1088,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">200</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -1127,8 +1100,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="7" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/box.jpg" alt="Product">
@@ -1139,8 +1112,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -1148,7 +1120,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">17</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -1160,8 +1132,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500"
-              data-aos-once="true">
+            <div data-id="8" class="myitem col-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+              data-aos-delay="500" data-aos-once="true">
               <div class="image-title-price">
                 <div class="image">
                   <img src="./assets/images/box2.jpg" alt="Product">
@@ -1172,8 +1144,7 @@
                     </div>
                     <div class="detail">
                       <i class="bi bi-heart"></i>
-                      <i class="bi bi-arrows-fullscreen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#stat"></i>
+                      <i class="bi bi-arrows-fullscreen"></i>
                     </div>
                   </div>
                 </div>
@@ -1181,7 +1152,7 @@
                   <h6>Norwegg Chair</h6>
 
                   <div class="info">
-                    <p class="price">$40.00</p>
+                    <p class="price">$<span class="pricee">40</span></p>
                     <p class="stars">
                       <i class="bi bi-star-fill"></i>
                       <i class="bi bi-star-fill"></i>
@@ -1326,17 +1297,59 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var sliderFor = $('.slider-for');
+      var sliderNav = $('.slider-nav');
+
+      function initSliders() {
+        $('.slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.slider-nav'
+        });
+
+        $('.slider-nav').slick({
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          asNavFor: '.slider-for',
+          dots: false,
+          focusOnSelect: true
+        });
+
+        function setOpacity() {
+          sliderNav.find('.slick-slide').css('opacity', 0.5);
+          sliderNav.find('.slick-current').css('opacity', 1);
+        }
+
+        setOpacity();
+
+        sliderFor.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+          sliderNav.find('.slick-slide').css('opacity', 0.5);
+          sliderNav.find('.slick-slide[data-slick-index="' + nextSlide + '"]').css('opacity', 1);
+        });
+      }
+
+      $('#stat').on('shown.bs.modal', function () {
+        initSliders();
+      });
+    });
+  </script>
   <script>
     AOS.init();
   </script>
+  <script src="./assets/js/basket.js"></script>
   <script src="./assets/js/index.js"></script>
   <script src="./assets/js/header.js"></script>
   <script src="./assets/js/dropDown.js"></script>

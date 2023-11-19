@@ -73,11 +73,12 @@
               <input type="text" name="search" id="search" placeholder="Search">
               <i class="bi bi-search"></i>
             </div>
-            <div class="myList person-basket">
+            <div class="myList person-basket" type="button" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#static">
               <i class="person bi bi-person"></i>
               <i class="bi bi-heart"></i> <span class="wishlist">3</span>
               <i class="myList bi bi-basket" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"></i> <span class="baskett">3</span>
+                data-bs-target="#staticBackdrop"></i> <span class="baskett">0</span>
               <i class="myList bi bi-list" type="button" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#staticBack"></i>
             </div>
@@ -92,39 +93,18 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <section id="SideBasket">
       <div class="modal-dialog m-0 p-0">
-        <div class="modal-content parent">
+        <div class="modal-content parent jsparent">
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="products">
-              <div class="image">
-                <img src="./assets/images/product-square-ian-dooley-347968-unsplash.jpg" alt="">
-              </div>
-              <div class="name-price">
-                <p class="name">Skull Tee</p>
-                <p class="quantity">Quantity: <span class="baseCount">1</span></p>
-                <p class="name" style="font-family: monospace;">&75.00</p>
-              </div>
-              <div class="xBtn btn-close"></div>
-            </div>
-            <div class="products">
-              <div class="image">
-                <img src="./assets/images/product-square-ian-dooley-347968-unsplash.jpg" alt="">
-              </div>
-              <div class="name-price">
-                <p class="name">Skull Tee</p>
-                <p class="quantity">Quantity: <span class="baseCount">1</span></p>
-                <p class="name" style="font-family: monospace;">&75.00</p>
-              </div>
-              <div class="xBtn btn-close"></div>
-            </div>
+
 
           </div>
           <div class="modal-footer">
             <div class="subTotal">
               <p>Subtotal:</p>
-              <p class="total">$180.00</p>
+              <p class="total"><span class="total_price">0</span></p>
             </div>
             <button class="view">View Cart</button>
             <button>Checkout</button>
@@ -177,6 +157,102 @@
 
         </div>
       </div>
+    </section>
+  </div>
+
+  <div class="modal fade" id="static" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <section id="SideBasket">
+      <div class="modal-dialog m-0 p-0 ">
+        <div class="modal-content parent">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+
+          <div class="sidebar-body">
+            <h5>
+              <span id="Login">Login</span>
+              <span id="Register">Register</span>
+            </h5>
+            <div id="loginPage" class="loginPage">
+              <form action="">
+                <div class="inputs">
+                  <label for="email">
+                    <p>Email</p>
+                    <p><input type="email" name="email" id="email"></p>
+                  </label>
+
+                  <label class="passs" for="pass">
+                    <p class="forgot">Password</p>
+                    <p class="forgot">forgot passworw</p>
+                  </label>
+                  <p class="inp"><input type="password" name="pass" id="pass" placeholder="Password"></p>
+
+                  <label class="check" for="check">
+                    <input type="checkbox" name="check" id="check">
+                    Remember me for 30 days
+                  </label>
+
+                  <button>
+                    <i class="fa fa-sign-in-alt mr-2"></i>
+                    Log in
+                  </button>
+                </div>
+                <div class="line">
+                  <p class="line"></p>
+                  <p>OR</p>
+                  <p class="line"></p>
+                </div>
+
+                <div class="icons">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-google"></i>
+                </div>
+              </form>
+            </div>
+            <div id="registerPage" class="registerPage">
+              <form action="">
+                <div class="inputs">
+                  <p class="text">
+                    The bedding was hardly able to cover it and seemed ready to slide off any
+                    moment. His many legs, pit.
+                  </p>
+                  <label for="email">
+                    <p>Name</p>
+                    <p><input type="text" name="name" id="name"></p>
+                  </label>
+                  <label for="email">
+                    <p>Email</p>
+                    <p><input type="email" name="email" id="email"></p>
+                  </label>
+
+                  <label class="passs" for="pass">
+                    <p class="forgot">Password</p>
+                    <p class="forgot">forgot passworw</p>
+                  </label>
+                  <p class="inp"><input type="password" name="pass" id="pass" placeholder="Password">
+                  </p>
+                  <button>
+                    <i class="fa fa-sign-in-alt mr-2"></i>
+                    Log in
+                  </button>
+                </div>
+                <div class="line">
+                  <p class="line"></p>
+                  <p>OR</p>
+                  <p class="line"></p>
+                </div>
+
+                <div class="icons">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-google"></i>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
     </section>
   </div>
 
@@ -729,6 +805,7 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./assets/js/basket.js"></script>
 <script src="./about-assets/js/about.js"></script>
 <script src="./blog-assets/js/blog.js"></script>
 <script src="./assets/js/dropDown.js"></script>

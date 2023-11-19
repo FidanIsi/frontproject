@@ -33,39 +33,6 @@
   }, 0);
 })();
 
-$(document).ready(function () {
-  var sliderFor = $(".slider-for");
-  var sliderNav = $(".slider-nav");
-
-  function initSliders() {
-    $(".slider-for").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: ".slider-nav",
-    });
-
-    $(".slider-nav").slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      asNavFor: ".slider-for",
-      dots: false,
-      focusOnSelect: true,
-    });
-  }
-
-  function setOpacity() {
-    sliderNav.find(".slick-slide").css("opacity", 0.5);
-    sliderNav.find(".slick-current").css("opacity", 1);
-  }
-
-  $("#stat").on("shown.bs.modal", function () {
-    initSliders();
-    setOpacity();
-  });
-});
-
 var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
