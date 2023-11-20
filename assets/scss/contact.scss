@@ -36,7 +36,8 @@
 
       .parallax {
         position: absolute;
-        top: -50px;
+        top: 0 !important;
+        left: 20px !important;
         z-index: 1;
         width: 100% !important;
       }
@@ -48,11 +49,12 @@
     top: 0;
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 60%;
 
     .parallax {
       position: absolute;
       top: -50px;
+      left: 320px;
       z-index: 1;
       width: 100%;
     }

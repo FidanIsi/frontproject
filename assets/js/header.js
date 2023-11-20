@@ -53,14 +53,7 @@ myListElements.forEach((element, index) => {
   element.addEventListener("click", handleClick(index));
 });
 
-$(document).ready(function () {
-  $(".dropbutton").click(function () {
-    var content = $(this).next(".dropdown-content");
 
-    $(".dropdown-content").not(content).slideUp();
-    content.slideToggle();
-  });
-});
 
 var login = document.querySelector("#Login");
 var register = document.querySelector("#Register");
@@ -85,5 +78,11 @@ $(document).ready(function () {
   $(".myListR").click(function () {
     $(".myListR").not(this).find("li div").slideUp();
     $(this).find("li div").slideToggle();
+  });
+
+  $(".dropButton").click(function () {
+    var content = $(this).next(".dropdown-content");
+    $(".dropdown-content").not(content).slideUp();
+    content.slideToggle();
   });
 });

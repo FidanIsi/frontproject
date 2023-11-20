@@ -15,14 +15,10 @@
     let remainingMinutes = Math.floor((distance % hour) / minute);
     let remainingSeconds = Math.floor((distance % minute) / second);
 
-    document.getElementById("days").innerText =
-      remainingDays < 10 ? "0" + remainingDays : remainingDays;
-    document.getElementById("hours").innerText =
-      remainingHours < 10 ? "0" + remainingHours : remainingHours;
-    document.getElementById("minutes").innerText =
-      remainingMinutes < 10 ? "0" + remainingMinutes : remainingMinutes;
-    document.getElementById("seconds").innerText =
-      remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
+    document.getElementById("days").innerText = remainingDays < 10 ? "0" + remainingDays : remainingDays;
+    document.getElementById("hours").innerText = remainingHours < 10 ? "0" + remainingHours : remainingHours;
+    document.getElementById("minutes").innerText = remainingMinutes < 10 ? "0" + remainingMinutes : remainingMinutes;
+    document.getElementById("seconds").innerText = remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
 
     if (distance < 0) {
       document.getElementById("headline").innerText = "Hello!";
@@ -41,13 +37,3 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-$(".title").click(function () {
-  let $icon = $(this).find("i");
-  $icon.toggleClass("active");
-  $(this).next().slideToggle();
-
-  if ($icon.hasClass("active")) {
-    $(".info").not($info).slideUp();
-    $(".title i").not($icon).removeClass("active");
-  }
-});
