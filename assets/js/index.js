@@ -35,5 +35,8 @@ var swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
     clickable: true,
   },
+  autoplay: {
+    delay: 5000,
+  },
 });
 
